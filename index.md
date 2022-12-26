@@ -20,5 +20,5 @@ There should be whitespace between paragraphs. We recommend including a README, 
 # Project 2
 
 **Denoising-Auto_encoders**
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/saisrivatsa123/BERT)
-<!-- <center><img src="assets/img/BERT.png"/></center> -->
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/saisrivatsa123/Denoising-Auto_encoders)
+<center><img src="assets/img/denoise.png"/></center>
