@@ -13,6 +13,7 @@ There should be whitespace between paragraphs. We recommend including a README, 
 # Project 1
 
 Fine-tuned a Sentiment analysis using Distilled BERT 
+<center><img src="assets/img/BERT.png"/></center>
 
 ## Header 2
 
