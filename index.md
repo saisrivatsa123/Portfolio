@@ -27,3 +27,9 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 **LendingClubCaseStudy**
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/saisrivatsa123/LendingClubCaseStudy)
+
+
+# Project 4
+
+**Long short-term memory (LSTM)**
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/saisrivatsa123/LSTM)
