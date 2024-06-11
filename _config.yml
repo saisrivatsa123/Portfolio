@@ -22,6 +22,11 @@ description: |
       text-decoration: none;
       transition: background-color 0.3s ease;
       font-size: 14px; /* Smaller font size */
+      white-space: nowrap; /* Prevent text from wrapping */
+      max-width: 200px; /* Ensure buttons have enough width */
+      overflow: hidden; /* Prevent overflow */
+      text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+      text-align: center; /* Center-align the text */
     }
     .portfolio-link.github {
       background-color: #333;
@@ -53,6 +58,9 @@ description: |
     }
   </style>
   <div class="portfolio-container">
+    <p align="center">
+      <img src="/assets/img/my_pi.jpeg" alt="Sai Srivathsa. B" width="150">
+    </p>
     <div class="button-group">
       <div>
         <p align="center"><strong>Profile</strong></p>
