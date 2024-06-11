@@ -3,6 +3,10 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
+    .portfolio-container {
+      text-align: center;
+      margin-top: 20px;
+    }
     .portfolio-links {
       display: flex;
       justify-content: center;
@@ -40,17 +44,30 @@ description: |
     .portfolio-link.huggingface:hover {
       background-color: #e06600;
     }
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
   </style>
-  <p align="center">
-    <img src="/assets/img/my_pi.jpeg" alt="Sai Srivathsa. B" width="150">
-  </p>
-  <div class="portfolio-links">
-    <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
-    <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
-    <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
-    <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
-    <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
-    <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
+  <div class="portfolio-container">
+    <p align="center">
+      <img src="/assets/img/my_pi.jpeg" alt="Sai Srivathsa. B" width="150">
+    </p>
+    <div class="button-group">
+      <div class="portfolio-links">
+        <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
+        <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
+        <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
+      </div>
+      <div class="portfolio-links">
+        <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
+        <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
+        <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
+      </div>
+    </div>
   </div>
 
 show_downloads: true
