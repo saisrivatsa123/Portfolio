@@ -3,25 +3,22 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    .portfolio-container {
-      text-align: center;
-      margin-top: 20px;
-    }
     .portfolio-links {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 10px; /* Reduced gap for smaller buttons */
       margin-top: 10px;
     }
     .portfolio-link {
       background-color: #0073b1; /* LinkedIn blue */
       color: white;
-      padding: 10px 20px;
+      padding: 5px 10px; /* Smaller padding for smaller buttons */
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s ease;
+      font-size: 14px; /* Smaller font size */
     }
     .portfolio-link.github {
       background-color: #333;
@@ -54,18 +51,23 @@ description: |
   </style>
   <div class="portfolio-container">
     <p align="center">
-      <img src="/assets/img/my_pi.jpeg" alt="Sai Srivathsa. B" width="150">
     </p>
     <div class="button-group">
-      <div class="portfolio-links">
-        <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
-        <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
-        <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
+      <div>
+        <p align="center"><strong>Profile</strong></p>
+        <div class="portfolio-links">
+          <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
+          <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
+          <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
+        </div>
       </div>
-      <div class="portfolio-links">
-        <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
-        <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
-        <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
+      <div>
+        <p align="center"><strong>Spaces</strong></p>
+        <div class="portfolio-links">
+          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
+          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
+          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
+        </div>
       </div>
     </div>
   </div>
