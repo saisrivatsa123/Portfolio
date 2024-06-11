@@ -11,7 +11,6 @@ description: |
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
       gap: 10px; /* Reduced gap for smaller buttons */
       margin-top: 10px;
     }
@@ -64,7 +63,7 @@ description: |
         </div>
       </div>
       <div>
-        <p align="justified"><strong>Spaces</strong></p>
+        <p align="center"><strong>Spaces</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
