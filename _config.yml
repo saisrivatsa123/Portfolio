@@ -4,7 +4,7 @@ logo: /assets/img/my_pi.jpeg
 description: |
   <style>
     .portfolio-container {
-      text-align: center;
+      text-align: left; /* Move content to the left */
       margin-top: 20px;
     }
     .portfolio-links {
@@ -64,7 +64,7 @@ description: |
   <div class="portfolio-container">
     <div class="button-group">
       <div>
-        <p align="center"><strong>Profile</strong></p>
+        <p><strong>Profile</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
           <span class="separator">|</span> <!-- Pipe separator -->
@@ -74,7 +74,7 @@ description: |
         </div>
       </div>
       <div>
-        <p align="center"><strong>Spaces</strong></p>
+        <p><strong>Spaces</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
           <span class="separator">|</span> <!-- Pipe separator -->
