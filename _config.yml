@@ -3,6 +3,10 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
+    .portfolio-container {
+      text-align: center;
+      margin-top: 20px;
+    }
     .portfolio-links {
       display: flex;
       justify-content: center;
@@ -51,6 +55,7 @@ description: |
   </style>
   <div class="portfolio-container">
     <p align="center">
+      <img src="/assets/img/my_pi.jpeg" alt="Sai Srivathsa. B" width="150">
     </p>
     <div class="button-group">
       <div>
