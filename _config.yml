@@ -1,13 +1,57 @@
-
 title: Sai Srivathsa. B
 logo: /assets/img/my_pic.png
 
-
-description:
+description: |
+  <style>
+    .portfolio-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .portfolio-link {
+      background-color: #0073b1; /* LinkedIn blue */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .portfolio-link.github {
+      background-color: #333;
+    }
+    .portfolio-link.resume {
+      background-color: #0073b1; /* Same as LinkedIn */
+    }
+    .portfolio-link.huggingface {
+      background-color: #ff7f00; /* Hugging Face orange */
+    }
+    .portfolio-link:hover {
+      background-color: #005582;
+    }
+    .portfolio-link.github:hover {
+      background-color: #555;
+    }
+    .portfolio-link.resume:hover {
+      background-color: #005582;
+    }
+    .portfolio-link.huggingface:hover {
+      background-color: #e06600;
+    }
+  </style>
   <p align="center">
-  <a href="blob/My_Resume.pdf">Resume</a> |
-  <a href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a> |
-  <a href="https://github.com/saisrivatsa123">GitHub</a>
+    <img src="/assets/img/my_pic.png" alt="Sai Srivathsa. B" width="150">
+  </p>
+  <div class="portfolio-links">
+    <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
+    <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
+    <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
+    <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
+    <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
+    <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
+  </div>
 
 show_downloads: true
 theme: jekyll-theme-minimal
