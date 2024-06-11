@@ -4,15 +4,18 @@ logo: /assets/img/my_pi.jpeg
 description: |
   <style>
     .portfolio-container {
-      text-align: left; /* Move content to the left */
-      margin-top: 20px;
+      text-align: left; /* Left-align content */
+      margin: 20px auto; /* Center-align container */
+      max-width: 600px; /* Limit container width */
     }
     .portfolio-links {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 5px; /* Reduced gap between buttons */
-      margin-top: 10px;
+      flex-direction: column;
+      gap: 10px; /* Adjust gap between sections */
+      margin-top: 20px; /* Increase margin between sections */
+    }
+    .portfolio-links p {
+      margin: 0; /* Remove default margin for paragraphs */
     }
     .portfolio-link {
       background-color: #0073b1; /* LinkedIn blue */
@@ -49,40 +52,22 @@ description: |
     .portfolio-link.huggingface:hover {
       background-color: #e06600;
     }
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
     .separator {
       color: #555;
       margin: 0 5px; /* Adjust the spacing between buttons and pipes */
     }
   </style>
   <div class="portfolio-container">
-    <div class="button-group">
-      <div>
-        <p><strong>Profile</strong></p>
-        <div class="portfolio-links">
-          <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
-          <span class="separator">|</span> <!-- Pipe separator -->
-          <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
-          <span class="separator">|</span> <!-- Pipe separator -->
-          <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
-        </div>
-      </div>
-      <div>
-        <p><strong>Spaces</strong></p>
-        <div class="portfolio-links">
-          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
-          <span class="separator">|</span> <!-- Pipe separator -->
-          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
-          <span class="separator">|</span> <!-- Pipe separator -->
-          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
-        </div>
-      </div>
+    <div class="portfolio-links">
+      <p align="center"><strong>Profile</strong></p>
+      <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
+      <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
+      <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
+
+      <p align="center"><strong>Spaces</strong></p>
+      <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
+      <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
+      <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
     </div>
   </div>
 
