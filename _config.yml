@@ -54,9 +54,6 @@ description: |
     }
   </style>
   <div class="portfolio-container">
-    <p align="center">
-      <img src="/assets/img/my_pi.jpeg" alt="Sai Srivathsa. B" width="150">
-    </p>
     <div class="button-group">
       <div>
         <p align="center"><strong>Profile</strong></p>
@@ -67,7 +64,7 @@ description: |
         </div>
       </div>
       <div>
-        <p align="center"><strong>Spaces</strong></p>
+        <p align="justified"><strong>Spaces</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
