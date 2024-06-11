@@ -1,5 +1,5 @@
 title: Sai Srivathsa. B
-logo: /assets/img/my_pic.png
+logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
@@ -42,7 +42,7 @@ description: |
     }
   </style>
   <p align="center">
-    <img src="/assets/img/my_pic.png" alt="Sai Srivathsa. B" width="150">
+    <img src="/assets/img/my_pi.jpeg" alt="Sai Srivathsa. B" width="150">
   </p>
   <div class="portfolio-links">
     <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
