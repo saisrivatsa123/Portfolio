@@ -60,11 +60,14 @@ description: |
       color: #555;
       margin: 0 3px; /* Adjust the spacing between buttons and pipes */
     }
+    .section-heading {
+      margin-bottom: 5px; /* Reduce margin between sections */
+    }
   </style>
   <div class="portfolio-container">
     <div class="button-group">
       <div>
-        <p align="center"><strong>Profile</strong></p>
+        <p class="section-heading"><strong>Profile</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
           <span class="separator">|</span> <!-- Pipe separator -->
@@ -74,7 +77,7 @@ description: |
         </div>
       </div>
       <div>
-        <p align="center"><strong>Spaces</strong></p>
+        <p class="section-heading"><strong>Spaces</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
           <span class="separator">|</span> <!-- Pipe separator -->
