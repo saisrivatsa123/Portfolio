@@ -19,7 +19,7 @@ There should be whitespace between paragraphs. We recommend including a README, 
 🎓 M.Sc. AI & ML – Liverpool John Moores University (LJMU)
 </p>
 
-<p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #e7f0f8ff;">
+<p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">
   <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" /> 
   Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
 </p>
