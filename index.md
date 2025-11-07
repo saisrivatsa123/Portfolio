@@ -12,7 +12,7 @@ There should be whitespace between paragraphs.
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
  -->
 <!-- ## Hi, I'm Srivathsa 👋 -->
-<h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #e5e5ebff;">
+<h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
   Hi, I'm Srivathsa 👋
 </h2>
 <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px;">
