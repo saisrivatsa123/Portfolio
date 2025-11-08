@@ -69,7 +69,7 @@ description: |
       <div>
         <p class="section-heading"><strong>Profile</strong></p>
         <div class="portfolio-links">
-          <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
+#          <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
           <span class="separator">|</span> <!-- Pipe separator -->
           <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
           <span class="separator">|</span> <!-- Pipe separator -->
