@@ -4,7 +4,7 @@ logo: /assets/img/my_pi.jpeg
 description: |
   <style>
     .portfolio-container {
-      text-align: center;
+      text-align: left;
       margin-top: 20px;
       margin-left: 0;
       max-height: 400px;
@@ -12,8 +12,8 @@ description: |
     }
     .portfolio-links {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: left;
+      align-items: left;
       gap: 5px; /* Reduced gap between buttons */
       margin-top: 10px;
     }
