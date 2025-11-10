@@ -8,14 +8,22 @@ description: |
     #   margin-top: 20px;
     #   margin-left: 0;
     # }
+
+    /* Force main site body and content wrapper to left-align */
+    body, .wrapper, .container, main {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Specifically for your portfolio container */
     .portfolio-container {
       text-align: left !important;
-      margin-top: 20px !important;
       margin-left: 0 !important;
-      max-width: 100% !important;
-      padding-left: 0 !important;
+      margin-right: 0 !important;
     }
-
 
     .portfolio-links {
       display: flex;
