@@ -1,6 +1,6 @@
 title: Sai Srivathsa. B
 logo: /assets/img/my_pi.jpeg
-intro: "Hi, I'm Srivathsa 👋"
+
 description: |
   <style>
     .portfolio-container {
@@ -67,10 +67,13 @@ description: |
   <div class="portfolio-container">
     <div class="button-group">
       <div>
+        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
+          Hi, I'm Srivathsa 👋 </h2>
+        
         <p class="section-heading"><strong>Profile</strong></p>
         <div class="portfolio-links">
-#          <a class="portfolio-link resume" href="blob/My_Resume123.pdf">Resume_1</a>
-#          <span class="separator">|</span> <!-- Pipe separator -->
+          <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
+          <span class="separator">|</span> <!-- Pipe separator -->
           <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
           <span class="separator">|</span> <!-- Pipe separator -->
           <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
