@@ -12,7 +12,7 @@ There should be whitespace between paragraphs.
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
  -->
 <!-- ## Hi, I'm Srivathsa 👋 -->
-<h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
+<!-- <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
   Hi, I'm Srivathsa 👋
 </h2>
 <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px;">
@@ -22,7 +22,7 @@ There should be whitespace between paragraphs. We recommend including a README, 
 <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">
   <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" /> 
   Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
-</p>
+</p> -->
 
 
 
