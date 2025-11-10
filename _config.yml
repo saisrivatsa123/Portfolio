@@ -84,23 +84,14 @@ description: |
         
 
         
-        # <p class="section-heading"><strong>Profile</strong></p>
-        # <div class="portfolio-links">
-        #   <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
-        #   <span class="separator">|</span> <!-- Pipe separator -->
-        #   <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
-        #   <span class="separator">|</span> <!-- Pipe separator -->
-        #   <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
-        # </div>
-        <p class="section-heading" style="text-align: center; font-weight: bold;">Profile</p>
-          <div class="portfolio-links" style="justify-content: center; overflow-x: hidden; max-width: 100%;">
-            <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
-            <span class="separator">|</span>
-            <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
-            <span class="separator">|</span>
-            <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
-          </div>
-
+        <p class="section-heading"><strong>Profile</strong></p>
+        <div class="portfolio-links">
+          <a class="portfolio-link resume" href="blob/My_Resume.pdf">Resume</a>
+          <span class="separator">|</span> <!-- Pipe separator -->
+          <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
+          <span class="separator">|</span> <!-- Pipe separator -->
+          <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
+        </div>
       </div>
       <div>
         <p class="section-heading"><strong>Spaces</strong></p>
