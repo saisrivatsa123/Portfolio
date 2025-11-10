@@ -3,11 +3,20 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
+    # .portfolio-container {
+    #   text-align: left;
+    #   margin-top: 20px;
+    #   margin-left: 0;
+    # }
     .portfolio-container {
-      text-align: left;
-      margin-top: 20px;
-      margin-left: 0;
+      text-align: left !important;
+      margin-top: 20px !important;
+      margin-left: 0 !important;
+      max-width: 100% !important;
+      padding-left: 0 !important;
     }
+
+
     .portfolio-links {
       display: flex;
       justify-content: center;
