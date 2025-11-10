@@ -13,7 +13,7 @@ description: |
     .portfolio-links {
       display: flex;
       justify-content: center;
-      align-items: left;
+      align-items: center;
       gap: 5px; /* Reduced gap between buttons */
       margin-top: 10px;
     }
