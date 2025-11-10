@@ -6,7 +6,7 @@ description: |
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
-      margin-left: 0;
+      # margin-left: 0;
     }
     .portfolio-links {
       display: flex;
