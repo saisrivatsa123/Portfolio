@@ -4,8 +4,9 @@ logo: /assets/img/my_pi.jpeg
 description: |
   <style>
     .portfolio-container {
-      text-align: center;
+      text-align: left;
       margin-top: 20px;
+      margin-left: 0;
     }
     .portfolio-links {
       display: flex;
