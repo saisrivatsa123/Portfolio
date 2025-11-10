@@ -1,4 +1,4 @@
-# title: Sai Srivathsa. B
+title: Sai Srivathsa. B
 logo: /assets/img/my_pi.jpeg
 
 description: |
@@ -11,7 +11,7 @@ description: |
     .portfolio-links {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: left;
       gap: 5px; /* Reduced gap between buttons */
       margin-top: 10px;
     }
