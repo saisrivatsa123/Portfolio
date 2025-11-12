@@ -9,12 +9,10 @@ description: |
       margin-left: 0;
       max-height: 400px;
       overflow-x: auto;
-      white-space: nowrap;
       overflow-y: auto;
     }
     .portfolio-links {
-      display: inline-flex;
-      # display: flex;
+      display: flex;
       justify-content: center;
       align-items: left;
       gap: 5px; /* Reduced gap between buttons */
