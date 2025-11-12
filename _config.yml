@@ -17,9 +17,7 @@ description: |
       # display: flex;
       justify-content: center;
       align-items: left;
-      gap: 10px; /* Reduced gap between buttons */
-      # overflow-x: auto;
-      max-width: 100%;
+      gap: 5px; /* Reduced gap between buttons */
       margin-top: 10px;
     }
     .portfolio-link {
