@@ -4,11 +4,10 @@ logo: /assets/img/my_pi.jpeg
 description: |
   <style>
     .portfolio-container {
-      text-align: center;
+      text-align: left;
       margin-top: 20px;
       margin-left: 0;
       max-height: 400px;
-      overflow-x: auto;
       overflow-y: auto;
     }
     .portfolio-links {
