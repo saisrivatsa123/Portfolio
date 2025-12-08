@@ -6,11 +6,13 @@ description: |
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
-      margin-left: 0;
-      max-height: 400px;
-      overflow-y: auto;
+      overflow-x: auto; 
+      overflow-y: auto;     
+      max-width: 100%; 
+      padding-left: 5px;            
     }
-    .portfolio-links {
+  
+  .portfolio-links {
       display: flex;
       justify-content: center;
       align-items: left;
@@ -74,7 +76,7 @@ description: |
           Hello there!, I'm Srivathsa 👋 
         </h2>
         <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px;">
-          🎓 M.Sc. AI & ML – Liverpool John Moores University (LJMU) 
+          🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU) 
         </p>
 
         <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">

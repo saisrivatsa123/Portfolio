@@ -16,7 +16,7 @@ There should be whitespace between paragraphs. We recommend including a README, 
   Hi, I'm Srivathsa 👋
 </h2>
 <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px;">
-🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
+🎓 M.Sc. AI & ML – Liverpool John Moores University (LJMU)
 </p>
 
 <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">
