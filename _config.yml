@@ -3,17 +3,49 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
+    /* Override theme to push content left */
+    .wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    section {
+      width: 100% !important;
+      max-width: 100% !important;
+      float: none !important;
+      padding: 20px !important;
+    }
+
+    header {
+      width: 270px !important;
+      float: left !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      padding: 20px !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+    }
+
+    body {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
+      margin-left: 290px;  /* Space for sidebar */
       max-width: 100%;
-      padding-left: 5px;
+      padding: 0 20px;
     }
 
     .portfolio-links {
       display: flex;
-      flex-wrap: wrap;        /* Allow wrapping on small screens */
-      justify-content: center;
+      flex-wrap: wrap;
+      justify-content: flex-start;  /* Changed from center to flex-start */
       align-items: center;
       gap: 8px;
       margin-top: 10px;
@@ -69,7 +101,7 @@ description: |
     .button-group {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;  /* Changed from center to flex-start */
       gap: 15px;
       margin-top: 10px;
     }
@@ -84,10 +116,36 @@ description: |
       margin-bottom: 8px;
       margin-top: 15px;
       font-size: 16px;
-      text-align: center;
+      text-align: left;  /* Changed from center to left */
+      font-weight: bold;
     }
 
     /* Mobile responsive */
+    @media (max-width: 960px) {
+      header {
+        position: relative !important;
+        width: 100% !important;
+        float: none !important;
+        height: auto !important;
+      }
+
+      .portfolio-container {
+        margin-left: 0;
+      }
+
+      .portfolio-links {
+        justify-content: center;
+      }
+
+      .button-group {
+        align-items: center;
+      }
+
+      .section-heading {
+        text-align: center;
+      }
+    }
+
     @media (max-width: 600px) {
       .portfolio-links {
         flex-direction: column;
@@ -95,7 +153,7 @@ description: |
       }
       
       .separator {
-        display: none;  /* Hide separators on mobile */
+        display: none;
       }
       
       .portfolio-link {
@@ -108,21 +166,21 @@ description: |
   <div class="portfolio-container">
     <div class="button-group">
 
-      <div>
-        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
+      <div style="width: 100%;">
+        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; text-align: left;">
           Hello there!, I'm Srivathsa 👋 
         </h2>
 
-        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px;">
+        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px; text-align: left;">
           🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
         </p>
 
-        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">
+        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff; text-align: left;">
           <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
           Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR
         </p>
 
-        <p class="section-heading"><strong>Profile</strong></p>
+        <p class="section-heading">Profile</p>
         <div class="portfolio-links">
           <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
           <span class="separator">|</span>
@@ -132,8 +190,8 @@ description: |
         </div>
       </div>
 
-      <div>
-        <p class="section-heading"><strong>Spaces</strong></p>
+      <div style="width: 100%;">
+        <p class="section-heading">Spaces</p>
         <div class="portfolio-links">
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
           <span class="separator">|</span>
