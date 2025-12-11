@@ -3,68 +3,19 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* Override theme to full width */
-    .wrapper {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 20px !important;
-    }
-
-    section {
-      width: 100% !important;
-      max-width: 100% !important;
-      float: none !important;
-    }
-
-    header {
-      width: 100% !important;
-      float: none !important;
-      position: relative !important;
-    }
-
-    body {
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-
-    /* Two-column layout */
     .portfolio-container {
-      display: flex;
-      gap: 30px;
-      max-width: 1400px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-
-    /* Left column - Photo & Info (30%) */
-    .left-column {
-      flex: 0 0 30%;
-      min-width: 300px;
-    }
-
-    .profile-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 20px;
-      border: 4px solid #0073b1;
-    }
-
-    /* Right column - Projects & Spaces (70%) */
-    .right-column {
-      flex: 1;
-      min-width: 0;
+      text-align: left;
+      margin-top: 20px;
+      max-width: 100%;
+      padding-left: 5px;
     }
 
     .portfolio-links {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      flex-wrap: wrap;        /* Allow wrapping on small screens */
+      justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       margin-top: 10px;
       padding: 5px 0;
     }
@@ -77,11 +28,11 @@ description: |
     .portfolio-link {
       background-color: #0073b1;
       color: white;
-      padding: 8px 16px;
+      padding: 6px 12px;
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s ease;
-      font-size: 14px;
+      font-size: 13px;
       white-space: nowrap;
       text-align: center;
       display: inline-block;
@@ -115,6 +66,14 @@ description: |
       background-color: #e06600;
     }
 
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
     .separator {
       color: #555;
       margin: 0 5px;
@@ -122,164 +81,69 @@ description: |
     }
 
     .section-heading {
-      margin-bottom: 12px;
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #111121ff;
-      border-bottom: 2px solid #0073b1;
-      padding-bottom: 8px;
-    }
-
-    .info-section {
-      background-color: #f8f9fa;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    .info-section h2 {
-      font-family: 'Arial Black', Gadget, sans-serif;
-      color: #111121ff;
-      margin-top: 0;
-      font-size: 24px;
-    }
-
-    .info-section p {
-      margin: 10px 0;
-      line-height: 1.6;
-    }
-
-    .skills-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .badge {
-      background-color: #e3f2fd;
-      color: #0073b1;
-      padding: 4px 10px;
-      border-radius: 15px;
-      font-size: 12px;
-      font-weight: bold;
+      margin-bottom: 8px;
+      margin-top: 15px;
+      font-size: 16px;
+      text-align: center;
     }
 
     /* Mobile responsive */
-    @media (max-width: 768px) {
-      .portfolio-container {
-        flex-direction: column;
-      }
-      
-      .left-column,
-      .right-column {
-        flex: 1 1 100%;
-        min-width: 100%;
-      }
-
-      .profile-photo {
-        width: 150px;
-        height: 150px;
-      }
-      
+    @media (max-width: 600px) {
       .portfolio-links {
-        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
       }
       
       .separator {
-        display: none;
+        display: none;  /* Hide separators on mobile */
+      }
+      
+      .portfolio-link {
+        width: 100%;
+        max-width: 250px;
       }
     }
   </style>
 
   <div class="portfolio-container">
-    
-    <!-- LEFT COLUMN: Photo & Info -->
-    <div class="left-column">
-      <img src="assets/img/my_pi.jpeg" alt="Sai Srivathsa" class="profile-photo">
-      
-      <div class="info-section">
-        <h2>Hello there!, I'm Srivathsa 👋</h2>
-        
-        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 15px;">
-          🎓 <strong>Master of Science</strong><br>
-          (Artificial Intelligence and Machine Learning)<br>
-          Liverpool John Moores University (LJMU)
+    <div class="button-group">
+
+      <div>
+        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
+          Hello there!, I'm Srivathsa 👋 
+        </h2>
+
+        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px;">
+          🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
         </p>
 
-        <div class="skills-badges">
-          <span class="badge">
-            <img src="assets/img/databricks%20image.jpg" alt="DB" width="12" style="vertical-align:middle" /> 
-            Databricks Certified
-          </span>
-          <span class="badge">Microsoft Fabric</span>
-          <span class="badge">AI & ML</span>
-          <span class="badge">LLMs</span>
-          <span class="badge">LangChain</span>
-          <span class="badge">Deep Learning</span>
-          <span class="badge">Computer Vision</span>
-          <span class="badge">MLOps</span>
-          <span class="badge">PySpark</span>
-          <span class="badge">Python</span>
-          <span class="badge">Azure</span>
-          <span class="badge">HL7/FHIR</span>
+        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">
+          <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
+          Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR
+        </p>
+
+        <p class="section-heading"><strong>Profile</strong></p>
+        <div class="portfolio-links">
+          <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
+          <span class="separator">|</span>
+          <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
+          <span class="separator">|</span>
+          <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
         </div>
       </div>
 
       <div>
-        <p class="section-heading">Profile</p>
+        <p class="section-heading"><strong>Spaces</strong></p>
         <div class="portfolio-links">
-          <a class="portfolio-link resume" href="blob/My_resume.pdf">📄 Resume</a>
-          <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">💼 LinkedIn</a>
-          <a class="portfolio-link github" href="https://github.com/saisrivatsa123">💻 GitHub</a>
+          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
+          <span class="separator">|</span>
+          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
+          <span class="separator">|</span>
+          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
         </div>
       </div>
+
     </div>
-
-    <!-- RIGHT COLUMN: Projects & Spaces -->
-    <div class="right-column">
-      <div>
-        <p class="section-heading">🚀 HuggingFace Spaces</p>
-        <div class="portfolio-links">
-          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">
-            🤖 Gemini Chatbot
-          </a>
-          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">
-            🦙 Ollama Operations
-          </a>
-          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">
-            🔗 Langchain QA Chatbot
-          </a>
-        </div>
-      </div>
-
-      <!-- Add more project sections here -->
-      <div style="margin-top: 30px;">
-        <p class="section-heading">📂 Featured Projects</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 15px;">
-          
-          <!-- Project cards - add your projects here -->
-          <div style="background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 15px; transition: box-shadow 0.3s;">
-            <h3 style="margin-top: 0; color: #0073b1;">Project Name 1</h3>
-            <p style="font-size: 13px; color: #666;">Brief description of your project goes here.</p>
-            <div style="margin-top: 10px;">
-              <a href="#" class="portfolio-link github" style="font-size: 12px; padding: 5px 10px;">View on GitHub</a>
-            </div>
-          </div>
-
-          <div style="background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 15px; transition: box-shadow 0.3s;">
-            <h3 style="margin-top: 0; color: #0073b1;">Project Name 2</h3>
-            <p style="font-size: 13px; color: #666;">Brief description of your project goes here.</p>
-            <div style="margin-top: 10px;">
-              <a href="#" class="portfolio-link github" style="font-size: 12px; padding: 5px 10px;">View on GitHub</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
   </div>
 
 show_downloads: true
