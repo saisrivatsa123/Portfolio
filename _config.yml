@@ -6,34 +6,39 @@ description: |
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
+      overflow-x: auto;
+      overflow-y: auto;
       max-width: 100%;
       padding-left: 5px;
     }
 
     .portfolio-links {
       display: flex;
-      flex-wrap: wrap;        /* Allow wrapping instead of scrolling */
+      overflow-x: auto;     /* Horizontal scroll */
       width: 100%;
-      justify-content: flex-start;  /* Align to left */
-      align-items: center;
-      gap: 8px;
+      justify-content: center;
+      align-items: center;  /* FIX: valid value */
+      gap: 5px;
       margin-top: 10px;
     }
 
     .portfolio-links a,
     .portfolio-links span {
-      flex-shrink: 0;
+      flex-shrink: 0;       /* Prevents truncation */
     }
 
     .portfolio-link {
       background-color: #0073b1;
       color: white;
-      padding: 6px 12px;
+      padding: 4px 8px;
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s ease;
-      font-size: 13px;
+      font-size: 12px;
       white-space: nowrap;
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       text-align: center;
     }
 
@@ -68,51 +73,25 @@ description: |
     .button-group {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;  /* Align left */
-      gap: 15px;
+      align-items: center;
+      gap: 10px;
       margin-top: 10px;
-      width: 100%;
-    }
-
-    .content-section {
-      width: 100%;
     }
 
     .separator {
       color: #555;
-      margin: 0 5px;
-      font-weight: bold;
+      margin: 0 3px;
     }
 
     .section-heading {
-      margin-bottom: 10px;
-      margin-top: 15px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    /* Mobile responsive */
-    @media (max-width: 600px) {
-      .portfolio-links {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      
-      .separator {
-        display: none;
-      }
-      
-      .portfolio-link {
-        width: 100%;
-        max-width: 250px;
-      }
+      margin-bottom: 5px;
     }
   </style>
 
   <div class="portfolio-container">
     <div class="button-group">
 
-      <div class="content-section">
+      <div>
         <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
           Hello there!, I'm Srivathsa 👋 
         </h2>
@@ -123,10 +102,10 @@ description: |
 
         <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">
           <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
-          Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR
+          Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
         </p>
 
-        <p class="section-heading">Profile</p>
+        <p class="section-heading"><strong>Profile</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
           <span class="separator">|</span>
@@ -136,8 +115,8 @@ description: |
         </div>
       </div>
 
-      <div class="content-section">
-        <p class="section-heading">Spaces</p>
+      <div>
+        <p class="section-heading"><strong>Spaces</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
           <span class="separator">|</span>
@@ -151,4 +130,4 @@ description: |
   </div>
 
 show_downloads: true
-theme: jekyll-theme-minimal
+theme: jekyll-theme-minimal 
