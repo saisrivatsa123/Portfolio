@@ -3,71 +3,43 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* Override theme to push content left */
-    .wrapper {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-
-    section {
-      width: 100% !important;
-      max-width: 100% !important;
-      float: none !important;
-      padding: 20px !important;
-    }
-
-    header {
-      width: 270px !important;
-      float: left !important;
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      padding: 20px !important;
-      height: 100vh !important;
-      overflow-y: auto !important;
-    }
-
-    body {
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
-      margin-left: 290px;  /* Space for sidebar */
+      overflow-x: auto;
+      overflow-y: auto;
       max-width: 100%;
-      padding: 0 20px;
+      padding-left: 5px;
     }
 
     .portfolio-links {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;  /* Changed from center to flex-start */
-      align-items: center;
-      gap: 8px;
+      overflow-x: auto;     /* Horizontal scroll */
+      width: 100%;
+      justify-content: center;
+      align-items: center;  /* FIX: valid value */
+      gap: 5px;
       margin-top: 10px;
-      padding: 5px 0;
     }
 
     .portfolio-links a,
     .portfolio-links span {
-      flex-shrink: 0;
+      flex-shrink: 0;       /* Prevents truncation */
     }
 
     .portfolio-link {
       background-color: #0073b1;
       color: white;
-      padding: 6px 12px;
+      padding: 4px 8px;
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s ease;
-      font-size: 13px;
+      font-size: 12px;
       white-space: nowrap;
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       text-align: center;
-      display: inline-block;
     }
 
     .portfolio-link.github {
@@ -101,86 +73,39 @@ description: |
     .button-group {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;  /* Changed from center to flex-start */
-      gap: 15px;
+      align-items: center;
+      gap: 10px;
       margin-top: 10px;
     }
 
     .separator {
       color: #555;
-      margin: 0 5px;
-      font-weight: bold;
+      margin: 0 3px;
     }
 
     .section-heading {
-      margin-bottom: 8px;
-      margin-top: 15px;
-      font-size: 16px;
-      text-align: left;  /* Changed from center to left */
-      font-weight: bold;
-    }
-
-    /* Mobile responsive */
-    @media (max-width: 960px) {
-      header {
-        position: relative !important;
-        width: 100% !important;
-        float: none !important;
-        height: auto !important;
-      }
-
-      .portfolio-container {
-        margin-left: 0;
-      }
-
-      .portfolio-links {
-        justify-content: center;
-      }
-
-      .button-group {
-        align-items: center;
-      }
-
-      .section-heading {
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .portfolio-links {
-        flex-direction: column;
-        gap: 10px;
-      }
-      
-      .separator {
-        display: none;
-      }
-      
-      .portfolio-link {
-        width: 100%;
-        max-width: 250px;
-      }
+      margin-bottom: 5px;
     }
   </style>
 
   <div class="portfolio-container">
     <div class="button-group">
 
-      <div style="width: 100%;">
-        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; text-align: left;">
+      <div>
+        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
           Hello there!, I'm Srivathsa 👋 
         </h2>
 
-        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px; text-align: left;">
+        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px;">
           🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
         </p>
 
-        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff; text-align: left;">
+        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">
           <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
-          Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR
+          Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
         </p>
 
-        <p class="section-heading">Profile</p>
+        <p class="section-heading"><strong>Profile</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
           <span class="separator">|</span>
@@ -190,8 +115,8 @@ description: |
         </div>
       </div>
 
-      <div style="width: 100%;">
-        <p class="section-heading">Spaces</p>
+      <div>
+        <p class="section-heading"><strong>Spaces</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
           <span class="separator">|</span>
