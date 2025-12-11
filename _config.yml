@@ -3,43 +3,68 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
+    /* Override theme container to full width */
+    .wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 20px !important;
+    }
+
+    section {
+      width: 100% !important;
+      max-width: 100% !important;
+      float: none !important;
+    }
+
+    header {
+      width: 100% !important;
+      float: none !important;
+      position: relative !important;
+      text-align: center !important;
+      padding-bottom: 20px !important;
+      border-bottom: 1px solid #e5e5e5 !important;
+    }
+
+    /* Make body full width */
+    body {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
-      overflow-x: auto;
-      overflow-y: auto;
       max-width: 100%;
-      padding-left: 5px;
+      padding: 20px;
     }
 
     .portfolio-links {
       display: flex;
-      overflow-x: auto;     /* Horizontal scroll */
-      width: 100%;
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;  /* FIX: valid value */
-      gap: 5px;
+      align-items: center;
+      gap: 8px;
       margin-top: 10px;
+      padding: 5px 0;
     }
 
     .portfolio-links a,
     .portfolio-links span {
-      flex-shrink: 0;       /* Prevents truncation */
+      flex-shrink: 0;
     }
 
     .portfolio-link {
       background-color: #0073b1;
       color: white;
-      padding: 4px 8px;
+      padding: 6px 12px;
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s ease;
-      font-size: 12px;
+      font-size: 13px;
       white-space: nowrap;
-      max-width: 150px;
-      overflow: hidden;
-      text-overflow: ellipsis;
       text-align: center;
+      display: inline-block;
     }
 
     .portfolio-link.github {
@@ -74,24 +99,45 @@ description: |
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
       margin-top: 10px;
     }
 
     .separator {
       color: #555;
-      margin: 0 3px;
+      margin: 0 5px;
+      font-weight: bold;
     }
 
     .section-heading {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      margin-top: 15px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 600px) {
+      .portfolio-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .separator {
+        display: none;
+      }
+      
+      .portfolio-link {
+        width: 100%;
+        max-width: 250px;
+      }
     }
   </style>
 
   <div class="portfolio-container">
     <div class="button-group">
 
-      <div>
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto;">
         <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
           Hello there!, I'm Srivathsa 👋 
         </h2>
@@ -102,7 +148,7 @@ description: |
 
         <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">
           <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
-          Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
+          Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR
         </p>
 
         <p class="section-heading"><strong>Profile</strong></p>
@@ -115,7 +161,7 @@ description: |
         </div>
       </div>
 
-      <div>
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto;">
         <p class="section-heading"><strong>Spaces</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
