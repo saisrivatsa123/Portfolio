@@ -4,7 +4,7 @@ title: Welcome
 ---
 
 <style>
-  /* CENTER ALL PROJECTS - BIGGER CARDS */
+  /* CENTER ALL PROJECTS + FIXED SEARCH BAR */
   * { box-sizing: border-box; }
   
   .projects-container {
@@ -84,7 +84,55 @@ title: Welcome
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   }
   
+  /* FIXED SEARCH BAR - BOTTOM RIGHT */
+  .ai-search-fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 350px;
+    z-index: 1000;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    border: 2px solid #0073b1;
+    backdrop-filter: blur(10px);
+  }
+  
+  .ai-search-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+    display: block;
+  }
+  
+  .ai-search-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    outline: none;
+    background: white;
+    transition: all 0.3s ease;
+  }
+  
+  .ai-search-input:focus {
+    border-color: #0073b1;
+    box-shadow: 0 0 20px rgba(0,115,177,0.3);
+  }
+  
+  .ai-search-input::placeholder {
+    color: #888;
+    font-weight: 400;
+  }
+  
+  /* Hide search on mobile - too cramped */
   @media (max-width: 768px) {
+    .ai-search-fixed {
+      display: none;
+    }
     .projects-container { padding: 40px 20px; }
     .project-card { 
       padding: 40px 25px; 
@@ -97,6 +145,14 @@ title: Welcome
   }
 </style>
 
+<!-- FIXED BOTTOM-RIGHT AI SEARCH BAR -->
+<div class="ai-search-fixed">
+  <div class="ai-search-label">🤖 Ask about my profile:</div>
+  <input type="text" class="ai-search-input" id="profile-search" 
+         placeholder="Skills? Projects? Experience?" />
+</div>
+
+<!-- YOUR PROJECTS -->
 <div class="projects-container">
   
   <!-- Project 1 -->
