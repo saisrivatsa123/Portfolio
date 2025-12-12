@@ -1,4 +1,32 @@
 ---
 ---
 
-@import "jekyll-theme-minimal";
+@import "{{ site.theme }}";
+
+// FORCE LEFT ALIGNMENT - Higher specificity overrides theme
+body.site {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.site-header,
+.site-footer,
+.site-main,
+.site-content,
+.page-content,
+.wrapper,
+.container {
+  max-width: none !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.post {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 20px !important;
+}
