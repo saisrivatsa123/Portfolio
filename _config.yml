@@ -6,25 +6,28 @@ description: |
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
-      overflow-x: auto;
-      overflow-y: auto;
       max-width: 100%;
       padding-left: 5px;
     }
 
+    .bio-content {
+      padding-left: 20px; /* Only bio info moves left */
+      max-width: 100%;
+    }
+
     .portfolio-links {
       display: flex;
-      overflow-x: auto;     /* Horizontal scroll */
+      flex-wrap: nowrap;
       width: 100%;
       justify-content: center;
-      align-items: center;  /* FIX: valid value */
+      align-items: center;
       gap: 5px;
       margin-top: 10px;
     }
 
     .portfolio-links a,
     .portfolio-links span {
-      flex-shrink: 0;       /* Prevents truncation */
+      flex-shrink: 1;
     }
 
     .portfolio-link {
@@ -34,9 +37,11 @@ description: |
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s ease;
-      font-size: 12px;
+      font-size: 11px;
       white-space: nowrap;
-      max-width: 150px;
+      flex: 0 1 auto;
+      min-width: 70px;
+      max-width: 130px;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
@@ -74,37 +79,59 @@ description: |
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
       margin-top: 10px;
     }
 
     .separator {
       color: #555;
       margin: 0 3px;
+      flex-shrink: 0;
     }
 
     .section-heading {
       margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-links {
+        flex-wrap: wrap;
+      }
+      
+      .portfolio-link {
+        font-size: 10px;
+        min-width: 60px;
+        max-width: 110px;
+      }
+      
+      .bio-content {
+        padding-left: 10px;
+      }
     }
   </style>
 
   <div class="portfolio-container">
     <div class="button-group">
-
-      <div>
-        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
+      
+      <!-- Bio section with left offset only -->
+      <div class="bio-content">
+        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 10px;">
           Hello there!, I'm Srivathsa 👋 
         </h2>
 
-        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px;">
+        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px; margin-bottom: 8px;">
           🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
         </p>
 
-        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">
+        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff; margin-bottom: 15px;">
           <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
           Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
         </p>
+      </div>
 
+      <!-- Profile links - centered -->
+      <div>
         <p class="section-heading"><strong>Profile</strong></p>
         <div class="portfolio-links">
           <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
@@ -115,6 +142,7 @@ description: |
         </div>
       </div>
 
+      <!-- Spaces links - centered -->
       <div>
         <p class="section-heading"><strong>Spaces</strong></p>
         <div class="portfolio-links">
