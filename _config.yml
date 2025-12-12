@@ -3,7 +3,7 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* FIXED RESPONSIVE - Works at 100% zoom */
+    /* NO CONTAINER - Just centered content styling */
     * { box-sizing: border-box; }
     
     .portfolio-links {
@@ -12,26 +12,25 @@ description: |
       width: 100%;
       justify-content: flex-start !important;
       align-items: center;
-      gap: 6px; /* Reduced gap */
-      margin-top: 10px; /* Reduced top margin */
+      gap: 8px;
+      margin-top: 12px;
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 15px; /* Added side padding */
     }
 
     .portfolio-link {
       background-color: #0073b1;
       color: white;
-      padding: 6px 14px; /* Slightly smaller padding */
+      padding: 8px 16px;
       border-radius: 8px;
       text-decoration: none;
       transition: all 0.3s ease;
-      font-size: 12px; /* Slightly smaller font */
+      font-size: 13px;
       font-weight: 500;
       white-space: nowrap;
       flex: 0 1 auto;
-      min-width: 80px; /* Reduced min-width */
-      max-width: 140px; /* Reduced max-width */
+      min-width: 90px;
+      max-width: 160px;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
@@ -50,91 +49,42 @@ description: |
     .portfolio-link.resume:hover { background-color: #005582; }
     .portfolio-link.huggingface:hover { background-color: #e06600; }
 
-    .button-group { 
-      display: block; 
-      width: 100%; 
-      max-width: 900px; 
-      margin: 0 auto; 
-      padding: 0 15px;
-    }
-    
-    .profile-section { 
-      width: 100%; 
-      margin-bottom: 20px; /* Reduced spacing */
-    }
-    
-    .separator { 
-      color: #666; 
-      margin: 0 4px; /* Reduced margin */
-      font-weight: 300; 
-    }
-    
+    .button-group { display: block; width: 100%; max-width: 900px; margin: 0 auto; }
+    .profile-section { width: 100%; margin-bottom: 25px; }
+    .separator { color: #666; margin: 0 5px; font-weight: 300; }
     .section-heading { 
-      margin-bottom: 6px; /* Reduced */
-      font-size: 15px; /* Slightly smaller */
+      margin-bottom: 8px; 
+      font-size: 16px; 
       font-weight: 600; 
       color: #333; 
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
-      padding: 0 15px;
     }
 
-    /* FIXED INTRO SECTION */
-    .intro-section {
-      max-width: 900px;
-      margin: 20px auto 0; /* Reduced top margin */
-      text-align: left;
-      padding: 0 15px;
-    }
-
-    /* BETTER RESPONSIVE */
-    @media (max-width: 1200px) {
-      .portfolio-links, .section-heading, .intro-section, .button-group {
-        max-width: 700px;
-      }
-    }
-    
     @media (max-width: 768px) {
       .portfolio-links { 
         flex-wrap: wrap; 
-        gap: 5px; 
-        margin-top: 8px;
-        padding: 0 10px;
+        gap: 6px; 
+        margin: 0 15px;
       }
-      .portfolio-link { 
-        font-size: 11px; 
-        padding: 5px 10px; 
-        min-width: 70px;
-      }
-      .section-heading { 
-        font-size: 14px; 
-        padding: 0 10px;
-      }
-      .intro-section {
-        padding: 0 10px;
-        margin-top: 15px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .intro-section h2 { font-size: 24px; margin-bottom: 12px; }
-      .intro-section p { font-size: 16px; }
+      .portfolio-link { font-size: 12px; padding: 6px 12px; min-width: 80px; }
+      .section-heading { margin: 0 15px; }
     }
   </style>
 
   <div class="button-group">
     
-    <!-- FIXED INTRO - Responsive */
-    <div class="intro-section">
-      <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 12px;">
+    <!-- INTRO -->
+    <div style="max-width: 900px; margin: 40px auto 0; text-align: left;">
+      <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 15px;">
         Hello there!, I'm Srivathsa 👋 
       </h2>
-      <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 17px; margin-bottom: 10px; color: #555;">
+      <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 18px; margin-bottom: 12px; color: #555;">
         🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
       </p>
-      <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff; margin-bottom: 20px; line-height: 1.4;">
-        <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
+      <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 15px; color: #041828ff; margin-bottom: 25px; line-height: 1.4;">
+        <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="22" style="vertical-align:middle" />
         Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
       </p>
     </div>
