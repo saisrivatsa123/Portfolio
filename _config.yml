@@ -3,50 +3,20 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* BULLETPROOF LEFT ALIGN - Targets ALL possible theme containers */
+    /* CENTERED PORTFOLIO - Perfect center alignment */
     * {
       box-sizing: border-box;
     }
     
-    html, body {
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100% !important;
-    }
-    
-    /* Target Jekyll Minimal theme's exact classes */
-    .site,
-    .site-header,
-    .site-footer,
-    .site-main,
-    .site-content,
-    .wrapper,
-    .page,
-    .page-content,
-    .post,
-    .post-content,
-    .main-content,
-    main,
-    article {
-      max-width: none !important;
-      width: 100% !important;
-      margin: 0 !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      text-align: left !important;
-    }
-    
-    /* Portfolio styles */
     .portfolio-container {
+      max-width: 800px; /* Fixed width for perfect centering */
+      margin: 40px auto; /* Perfect center + top spacing */
+      padding: 30px 25px;
       text-align: left;
-      margin-top: 20px;
-      max-width: 100%;
-      width: 100vw;
-      padding-left: 20px;
-      padding-right: 20px;
-      margin-left: 0 !important;
-      position: relative;
-      left: 0 !important;
+      background: linear-gradient(145deg, #ffffff, #f8f9fa);
+      border-radius: 20px;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.5);
     }
 
     .portfolio-links {
@@ -55,8 +25,8 @@ description: |
       width: 100%;
       justify-content: flex-start !important;
       align-items: center;
-      gap: 5px;
-      margin-top: 10px;
+      gap: 8px;
+      margin-top: 12px;
     }
 
     .portfolio-links a,
@@ -67,25 +37,30 @@ description: |
     .portfolio-link {
       background-color: #0073b1;
       color: white;
-      padding: 4px 8px;
-      border-radius: 5px;
+      padding: 8px 16px; /* Bigger buttons */
+      border-radius: 8px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
-      font-size: 11px;
+      transition: all 0.3s ease;
+      font-size: 13px; /* Slightly bigger text */
+      font-weight: 500;
       white-space: nowrap;
       flex: 0 1 auto;
-      min-width: 70px;
-      max-width: 130px;
+      min-width: 90px;
+      max-width: 160px;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
+      box-shadow: 0 3px 10px rgba(0,115,177,0.3);
     }
 
-    .portfolio-link.github { background-color: #333; }
+    .portfolio-link.github { background-color: #333; box-shadow: 0 3px 10px rgba(0,0,0,0.3); }
     .portfolio-link.resume { background-color: #0073b1; }
-    .portfolio-link.huggingface { background-color: #ff7f00; }
+    .portfolio-link.huggingface { background-color: #ff7f00; box-shadow: 0 3px 10px rgba(255,127,0,0.4); }
 
-    .portfolio-link:hover { background-color: #005582; }
+    .portfolio-link:hover { 
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important;
+    }
     .portfolio-link.github:hover { background-color: #555; }
     .portfolio-link.resume:hover { background-color: #005582; }
     .portfolio-link.huggingface:hover { background-color: #e06600; }
@@ -97,38 +72,54 @@ description: |
 
     .profile-section {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .separator {
-      color: #555;
-      margin: 0 3px;
+      color: #666;
+      margin: 0 5px;
+      font-weight: 300;
     }
 
     .section-heading {
-      margin-bottom: 5px;
-      font-size: 14px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
     }
 
+    /* Responsive */
     @media (max-width: 768px) {
-      .portfolio-container { padding-left: 15px; padding-right: 15px; }
-      .portfolio-links { flex-wrap: wrap; justify-content: flex-start !important; }
+      .portfolio-container { 
+        margin: 20px 15px; 
+        padding: 25px 20px; 
+        border-radius: 15px;
+      }
+      .portfolio-links { 
+        flex-wrap: wrap; 
+        gap: 6px;
+      }
+      .portfolio-link { 
+        font-size: 12px; 
+        padding: 6px 12px; 
+        min-width: 80px;
+      }
     }
   </style>
 
   <div class="portfolio-container">
     <div class="button-group">
       <div>
-        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 10px;">
+        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 15px;">
           Hello there!, I'm Srivathsa 👋 
         </h2>
 
-        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px; margin-bottom: 8px;">
+        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 18px; margin-bottom: 12px; color: #555;">
           🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
         </p>
 
-        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff; margin-bottom: 15px;">
-          <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
+        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 15px; color: #041828ff; margin-bottom: 25px; line-height: 1.4;">
+          <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="22" style="vertical-align:middle" />
           Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
         </p>
 
