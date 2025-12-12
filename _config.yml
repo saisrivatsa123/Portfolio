@@ -3,7 +3,7 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* VERTICAL SCROLL + DOWNLOADS INSIDE */
+    /* VERTICAL SCROLL + DOWNLOADS INSIDE + REDUCED LOGO SPACING */
     * { box-sizing: border-box; }
     
     .button-group {
@@ -36,7 +36,7 @@ description: |
       max-width: 900px !important;
       margin: 20px auto !important;
       padding: 15px !important;
-      order: 999 !important; /* Force to end */
+      order: 999 !important;
     }
 
     .portfolio-links {
@@ -106,8 +106,8 @@ description: |
   <!-- MAIN SCROLL CONTAINER -->
   <div class="button-group">
     
-    <!-- INTRO -->
-    <div style="max-width: 900px; margin: 40px auto 0; text-align: left;">
+    <!-- INTRO - REDUCED TOP SPACING -->
+    <div style="max-width: 900px; margin: 10px auto 0; text-align: left;"> <!-- CHANGED: 40px → 10px -->
       <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 15px;">
         Hello there!, I'm Srivathsa 👋 
       </h2>
