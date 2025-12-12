@@ -3,7 +3,6 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* VERTICAL SCROLL + DOWNLOADS INSIDE + REDUCED LOGO SPACING */
     * { box-sizing: border-box; }
     
     .button-group {
@@ -29,15 +28,6 @@ description: |
     }
     .button-group::-webkit-scrollbar-thumb:hover { background: #999; }
 
-    /* FORCE DOWNLOADS INSIDE SCROLL */
-    .download-section, 
-    [show_downloads],
-    .download-button {
-      max-width: 900px !important;
-      margin: 20px auto !important;
-      padding: 15px !important;
-      order: 999 !important;
-    }
 
     .portfolio-links {
       display: flex;
@@ -94,13 +84,6 @@ description: |
       margin-right: auto;
     }
 
-    @media (max-width: 768px) {
-      .portfolio-links { flex-wrap: wrap; gap: 6px; margin: 0 15px; }
-      .portfolio-link { font-size: 12px; padding: 6px 12px; min-width: 80px; }
-      .section-heading { margin: 0 15px; }
-      .button-group { max-height: 85vh; padding-right: 10px; }
-      .download-section, [show_downloads] { margin: 15px !important; padding: 10px !important; }
-    }
   </style>
 
   <!-- MAIN SCROLL CONTAINER -->
@@ -139,11 +122,6 @@ description: |
       <span class="separator">|</span>
       <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
     </div>
-
-#    <!-- DOWNLOADS FORCED INSIDE -->
-#    <div class="download-section">
-#      <p class="section-heading" style="text-align: center;"><strong>Downloads</strong></p>
-#    </div>
 
   </div>
 
