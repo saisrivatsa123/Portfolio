@@ -3,44 +3,18 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* FULL PAGE CONTAINER - EVERYTHING INSIDE */
+    /* CENTERED - NO FULL-PAGE CONTAINER OVERRIDES */
     * { box-sizing: border-box; }
     
-    /* Force EVERYTHING into centered container */
-    body, html, .site, .site-header, .site-footer, .site-main, 
-    .site-content, .wrapper, .page, .page-content, .post, 
-    .post-content, main, article {
-      margin: 0 !important;
-      padding: 0 !important;
-      max-width: none !important;
-      width: 100% !important;
-    }
-    
-    /* MASTER CONTAINER - HOLDS TITLE, LOGO, EVERYTHING */
-    .master-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 30px;
-      min-height: 100vh;
-      background: linear-gradient(145deg, #ffffff, #f8f9fa);
-      border-radius: 0;
-      box-shadow: 0 0 100px rgba(0,0,0,0.1);
-      position: relative;
-      text-align: left;
-    }
-    
-    /* Title and logo inside container */
-    .site-title, .site-logo {
-      text-align: center !important;
-      margin-bottom: 30px !important;
-    }
-    
+    /* ONLY target the portfolio content - leave theme intact */
     .portfolio-wrapper {
-      margin-top: 20px;
+      max-width: 900px;
+      margin: 40px auto;
       padding: 30px;
-      background: rgba(255,255,255,0.8);
+      text-align: left;
+      background: linear-gradient(145deg, #ffffff, #f8f9fa);
       border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 15px 50px rgba(0,0,0,0.1);
       border: 1px solid rgba(255,255,255,0.5);
     }
 
@@ -95,74 +69,66 @@ description: |
       color: #333; 
     }
 
-    /* FORCE downloads inside container */
-    .download-section, [show_downloads] {
-      margin-top: 30px !important;
-      padding: 20px !important;
-      background: rgba(255,255,255,0.5) !important;
-      border-radius: 12px !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
+    /* Ensure downloads stay within container */
+    .download-section {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
     }
 
     @media (max-width: 768px) {
-      .master-container { padding: 20px 15px; }
-      .portfolio-wrapper { padding: 20px 15px; margin-top: 15px; }
+      .portfolio-wrapper { margin: 20px 15px; padding: 25px 20px; border-radius: 15px; }
       .portfolio-links { flex-wrap: wrap; gap: 6px; }
+      .portfolio-link { font-size: 12px; padding: 6px 12px; min-width: 80px; }
     }
   </style>
 
-  <!-- MASTER CONTAINER - HOLDS TITLE + LOGO + EVERYTHING -->
-  <div class="master-container">
-    
-    <!-- PORTFOLIO CONTENT -->
-    <div class="portfolio-wrapper">
-      <div class="button-group">
-        
-        <!-- INTRO -->
-        <div>
-          <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 15px;">
-            Hello there!, I'm Srivathsa 👋 
-          </h2>
-          <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 18px; margin-bottom: 12px; color: #555;">
-            🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
-          </p>
-          <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 15px; color: #041828ff; margin-bottom: 25px; line-height: 1.4;">
-            <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="22" style="vertical-align:middle" />
-            Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
-          </p>
-        </div>
-
-        <!-- PROFILE -->
-        <div>
-          <p class="section-heading"><strong>Profile</strong></p>
-          <div class="portfolio-links profile-section">
-            <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
-            <span class="separator">|</span>
-            <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
-            <span class="separator">|</span>
-            <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
-          </div>
-        </div>
-
-        <!-- SPACES -->
-        <div>
-          <p class="section-heading"><strong>Spaces</strong></p>
-          <div class="portfolio-links profile-section">
-            <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
-            <span class="separator">|</span>
-            <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
-            <span class="separator">|</span>
-            <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
-          </div>
-        </div>
-
+  <!-- SINGLE CONTAINER HOLDS EVERYTHING: Profile, Spaces, Downloads -->
+  <div class="portfolio-wrapper">
+    <div class="button-group">
+      
+      <!-- INTRO -->
+      <div>
+        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 15px;">
+          Hello there!, I'm Srivathsa 👋 
+        </h2>
+        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 18px; margin-bottom: 12px; color: #555;">
+          🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
+        </p>
+        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 15px; color: #041828ff; margin-bottom: 25px; line-height: 1.4;">
+          <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="22" style="vertical-align:middle" />
+          Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
+        </p>
       </div>
-    </div>
-    
-    <!-- DOWNLOADS FORCED INSIDE -->
-    <div class="download-section">
-      <p class="section-heading" style="text-align: center; margin-bottom: 20px;"><strong>Downloads</strong></p>
+
+      <!-- PROFILE -->
+      <div>
+        <p class="section-heading"><strong>Profile</strong></p>
+        <div class="portfolio-links profile-section">
+          <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
+          <span class="separator">|</span>
+          <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
+          <span class="separator">|</span>
+          <a class="portfolio-link github" href="https://github.com/saisrivatsa123">GitHub</a>
+        </div>
+      </div>
+
+      <!-- SPACES -->
+      <div>
+        <p class="section-heading"><strong>Spaces</strong></p>
+        <div class="portfolio-links profile-section">
+          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
+          <span class="separator">|</span>
+          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
+          <span class="separator">|</span>
+          <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
+        </div>
+      </div>
+
+      <!-- DOWNLOADS (show_downloads: true will appear here automatically) -->
+      <div class="download-section">
+        <p class="section-heading"><strong>Downloads</strong></p>
+      </div>
     </div>
   </div>
 
