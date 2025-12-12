@@ -31,7 +31,6 @@ description: |
       max-width: none !important;
       width: 100% !important;
       margin: 0 !important;
-      padding-left: 0 !important;
       padding-right: 0 !important;
       text-align: left !important;
     }
@@ -42,7 +41,6 @@ description: |
       margin-top: 20px;
       max-width: 100%;
       width: 100vw;
-      padding-left: 20px;
       padding-right: 20px;
       margin-left: 0 !important;
       position: relative;
@@ -111,7 +109,6 @@ description: |
     }
 
     @media (max-width: 768px) {
-      .portfolio-container { padding-left: 15px; padding-right: 15px; }
       .portfolio-links { flex-wrap: wrap; justify-content: flex-start !important; }
     }
   </style>
