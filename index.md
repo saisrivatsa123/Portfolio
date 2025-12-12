@@ -241,7 +241,7 @@ title: Welcome
 </div>
 
 <script>
-const API_BASE = "https://srivathsa96-portfolio.hf.space";
+const API_BASE = "/";
 const searchInput = document.getElementById('profile-search');
 const answerDiv = document.getElementById('ai-answer');
 const uploadStatus = document.getElementById('upload-status');
