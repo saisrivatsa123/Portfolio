@@ -3,9 +3,39 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* NO CONTAINER - Just centered content styling */
+    /* NO CONTAINER - Just centered content styling + VERTICAL SCROLL */
     * { box-sizing: border-box; }
     
+    .button-group {
+      display: block; 
+      width: 100%; 
+      max-width: 900px; 
+      margin: 0 auto;
+      max-height: 80vh; /* Limit height */
+      overflow-y: auto; /* VERTICAL SCROLL */
+      padding-right: 15px; /* Scrollbar space */
+      scrollbar-width: thin; /* Firefox */
+      scrollbar-color: #ccc transparent;
+    }
+    
+    /* Custom scrollbar for Webkit browsers (Chrome/Safari) */
+    .button-group::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .button-group::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    .button-group::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+    
+    .button-group::-webkit-scrollbar-thumb:hover {
+      background: #999;
+    }
+
     .portfolio-links {
       display: flex;
       flex-wrap: nowrap;
@@ -49,7 +79,6 @@ description: |
     .portfolio-link.resume:hover { background-color: #005582; }
     .portfolio-link.huggingface:hover { background-color: #e06600; }
 
-    .button-group { display: block; width: 100%; max-width: 900px; margin: 0 auto; }
     .profile-section { width: 100%; margin-bottom: 25px; }
     .separator { color: #666; margin: 0 5px; font-weight: 300; }
     .section-heading { 
@@ -70,6 +99,7 @@ description: |
       }
       .portfolio-link { font-size: 12px; padding: 6px 12px; min-width: 80px; }
       .section-heading { margin: 0 15px; }
+      .button-group { max-height: 85vh; padding-right: 10px; }
     }
   </style>
 
