@@ -3,7 +3,7 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* NO CONTAINER - Just centered content styling + VERTICAL SCROLL */
+    /* VERTICAL SCROLL + DOWNLOADS INSIDE */
     * { box-sizing: border-box; }
     
     .button-group {
@@ -11,29 +11,32 @@ description: |
       width: 100%; 
       max-width: 900px; 
       margin: 0 auto;
-      max-height: 80vh; /* Limit height */
-      overflow-y: auto; /* VERTICAL SCROLL */
-      padding-right: 15px; /* Scrollbar space */
-      scrollbar-width: thin; /* Firefox */
+      max-height: 80vh;
+      overflow-y: auto;
+      padding-right: 15px;
+      scrollbar-width: thin;
       scrollbar-color: #ccc transparent;
     }
     
-    /* Custom scrollbar for Webkit browsers (Chrome/Safari) */
+    /* Custom scrollbar */
     .button-group::-webkit-scrollbar {
       width: 8px;
     }
-    
-    .button-group::-webkit-scrollbar-track {
-      background: transparent;
+    .button-group::-webkit-scrollbar-track { background: transparent; }
+    .button-group::-webkit-scrollbar-thumb { 
+      background: #ccc; 
+      border-radius: 4px; 
     }
-    
-    .button-group::-webkit-scrollbar-thumb {
-      background: #ccc;
-      border-radius: 4px;
-    }
-    
-    .button-group::-webkit-scrollbar-thumb:hover {
-      background: #999;
+    .button-group::-webkit-scrollbar-thumb:hover { background: #999; }
+
+    /* FORCE DOWNLOADS INSIDE SCROLL */
+    .download-section, 
+    [show_downloads],
+    .download-button {
+      max-width: 900px !important;
+      margin: 20px auto !important;
+      padding: 15px !important;
+      order: 999 !important; /* Force to end */
     }
 
     .portfolio-links {
@@ -92,17 +95,15 @@ description: |
     }
 
     @media (max-width: 768px) {
-      .portfolio-links { 
-        flex-wrap: wrap; 
-        gap: 6px; 
-        margin: 0 15px;
-      }
+      .portfolio-links { flex-wrap: wrap; gap: 6px; margin: 0 15px; }
       .portfolio-link { font-size: 12px; padding: 6px 12px; min-width: 80px; }
       .section-heading { margin: 0 15px; }
       .button-group { max-height: 85vh; padding-right: 10px; }
+      .download-section, [show_downloads] { margin: 15px !important; padding: 10px !important; }
     }
   </style>
 
+  <!-- MAIN SCROLL CONTAINER -->
   <div class="button-group">
     
     <!-- INTRO -->
@@ -137,6 +138,11 @@ description: |
       <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
       <span class="separator">|</span>
       <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
+    </div>
+
+    <!-- DOWNLOADS FORCED INSIDE -->
+    <div class="download-section">
+      <p class="section-heading" style="text-align: center;"><strong>Downloads</strong></p>
     </div>
 
   </div>
