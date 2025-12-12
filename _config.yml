@@ -3,13 +3,31 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* Override Jekyll Minimal theme centering - make content start from left edge */
-    body {
-      margin: 0 !important;
-      padding: 0 !important;
+    /* BULLETPROOF LEFT ALIGN - Targets ALL possible theme containers */
+    * {
+      box-sizing: border-box;
     }
     
-    .site, .site-content, .wrapper, .container, .page-content, .post-content {
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+    }
+    
+    /* Target Jekyll Minimal theme's exact classes */
+    .site,
+    .site-header,
+    .site-footer,
+    .site-main,
+    .site-content,
+    .wrapper,
+    .page,
+    .page-content,
+    .post,
+    .post-content,
+    .main-content,
+    main,
+    article {
       max-width: none !important;
       width: 100% !important;
       margin: 0 !important;
@@ -18,22 +36,24 @@ description: |
       text-align: left !important;
     }
     
-    /* Portfolio specific styles - FIXED ALIGNMENT */
+    /* Portfolio styles */
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
       max-width: 100%;
-      width: 100%;
+      width: 100vw;
       padding-left: 20px;
       padding-right: 20px;
       margin-left: 0 !important;
+      position: relative;
+      left: 0 !important;
     }
 
     .portfolio-links {
       display: flex;
       flex-wrap: nowrap;
       width: 100%;
-      justify-content: flex-start; /* Left align buttons */
+      justify-content: flex-start !important;
       align-items: center;
       gap: 5px;
       margin-top: 10px;
@@ -61,50 +81,28 @@ description: |
       text-align: center;
     }
 
-    .portfolio-link.github {
-      background-color: #333;
-    }
+    .portfolio-link.github { background-color: #333; }
+    .portfolio-link.resume { background-color: #0073b1; }
+    .portfolio-link.huggingface { background-color: #ff7f00; }
 
-    .portfolio-link.resume {
-      background-color: #0073b1;
-    }
+    .portfolio-link:hover { background-color: #005582; }
+    .portfolio-link.github:hover { background-color: #555; }
+    .portfolio-link.resume:hover { background-color: #005582; }
+    .portfolio-link.huggingface:hover { background-color: #e06600; }
 
-    .portfolio-link.huggingface {
-      background-color: #ff7f00;
-    }
-
-    .portfolio-link:hover {
-      background-color: #005582;
-    }
-
-    .portfolio-link.github:hover {
-      background-color: #555;
-    }
-
-    .portfolio-link.resume:hover {
-      background-color: #005582;
-    }
-
-    .portfolio-link.huggingface:hover {
-      background-color: #e06600;
-    }
-
-    /* FIXED: Force left alignment for all sections */
     .button-group {
-      display: block; /* Changed from flex to block */
+      display: block;
       width: 100%;
-      margin-top: 10px;
     }
 
     .profile-section {
       width: 100%;
-      margin-bottom: 20px; /* Add space between sections */
+      margin-bottom: 20px;
     }
 
     .separator {
       color: #555;
       margin: 0 3px;
-      flex-shrink: 0;
     }
 
     .section-heading {
@@ -112,29 +110,14 @@ description: |
       font-size: 14px;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
-      .portfolio-links {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-      }
-      
-      .portfolio-link {
-        font-size: 10px;
-        min-width: 60px;
-        max-width: 110px;
-      }
-      
-      .portfolio-container {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
+      .portfolio-container { padding-left: 15px; padding-right: 15px; }
+      .portfolio-links { flex-wrap: wrap; justify-content: flex-start !important; }
     }
   </style>
 
   <div class="portfolio-container">
     <div class="button-group">
-
       <div>
         <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 10px;">
           Hello there!, I'm Srivathsa 👋 
@@ -169,7 +152,6 @@ description: |
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
         </div>
       </div>
-
     </div>
   </div>
 
