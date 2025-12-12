@@ -7,23 +7,24 @@ description: |
       text-align: left;
       margin-top: 20px;
       max-width: 100%;
-      padding-left: 5px;
-      overflow: hidden;
+      padding-left: 20px; /* Extended left padding for bio */
+      padding-right: 20px;
     }
 
     .portfolio-links {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap; /* Keep Profile and Spaces in single line */
       width: 100%;
       justify-content: center;
       align-items: center;
       gap: 5px;
       margin-top: 10px;
+      max-width: 100%;
     }
 
     .portfolio-links a,
     .portfolio-links span {
-      flex-shrink: 0;
+      flex-shrink: 1; /* Allow shrinking to fit */
     }
 
     .portfolio-link {
@@ -33,11 +34,11 @@ description: |
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s ease;
-      font-size: 12px;
+      font-size: 11px; /* Slightly smaller font */
       white-space: nowrap;
-      flex: 1 1 auto;
-      min-width: 80px;
-      max-width: 140px;
+      flex: 0 1 auto;
+      min-width: 70px; /* Reduced min-width */
+      max-width: 130px;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
@@ -74,18 +75,38 @@ description: |
     .button-group {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 10px;
+      align-items: flex-start; /* Left align for bio */
+      gap: 15px;
       margin-top: 10px;
+      max-width: 100%;
+    }
+
+    .profile-section {
+      width: 100%;
     }
 
     .separator {
       color: #555;
       margin: 0 3px;
+      flex-shrink: 0;
     }
 
     .section-heading {
       margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    /* Responsive: Stack on very small screens */
+    @media (max-width: 768px) {
+      .portfolio-links {
+        flex-wrap: wrap;
+      }
+      
+      .portfolio-link {
+        font-size: 10px;
+        min-width: 60px;
+        max-width: 110px;
+      }
     }
   </style>
 
@@ -93,21 +114,21 @@ description: |
     <div class="button-group">
 
       <div>
-        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff;">
+        <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 10px;">
           Hello there!, I'm Srivathsa 👋 
         </h2>
 
-        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px;">
+        <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 16px; margin-bottom: 8px;">
           🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
         </p>
 
-        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff;">
+        <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 14px; color: #041828ff; margin-bottom: 15px;">
           <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
           Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
         </p>
 
         <p class="section-heading"><strong>Profile</strong></p>
-        <div class="portfolio-links">
+        <div class="portfolio-links profile-section">
           <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
           <span class="separator">|</span>
           <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
@@ -118,7 +139,7 @@ description: |
 
       <div>
         <p class="section-heading"><strong>Spaces</strong></p>
-        <div class="portfolio-links">
+        <div class="portfolio-links profile-section">
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
           <span class="separator">|</span>
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
