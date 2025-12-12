@@ -122,7 +122,7 @@ description: |
 
     <!-- PROFILE -->
     <p class="section-heading"><strong>Profile</strong></p>
-    <div class="portfolio-links profile-section">
+    <div class="portfolio-links profile-section" style="margin: 10px auto 0;">
       <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
       <span class="separator">|</span>
       <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
