@@ -269,7 +269,7 @@ async function autoLoadResume() {
         autoLoadStatus.textContent = '🔄 Auto-loading resume...';
         
         // Upload to API
-        const apiResponse = await fetch(`${API_BASE}/upload-resume`, {
+        const apiResponse = await fetch(`${API_BASE}upload-resume`, {
             method: 'POST',
             body: formData
         });
@@ -355,7 +355,7 @@ async function askProfile(question) {
     answerDiv.className = 'ai-answer';
     
     try {
-        const response = await fetch(`${API_BASE}/ask`, {
+        const response = await fetch(`${API_BASE}ask`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ question: question.trim() })
