@@ -3,28 +3,50 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
+    /* BULLETPROOF LEFT ALIGN - Targets ALL possible theme containers */
+    * { box-sizing: border-box; }
+    
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+    }
+    
+    .site, .site-header, .site-footer, .site-main, .site-content,
+    .wrapper, .page, .page-content, .post, .post-content,
+    .main-content, main, article {
+      max-width: none !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      text-align: left !important;
+    }
+    
+    /* MAIN CONTAINER - REDUCED PADDING */
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
       max-width: 100%;
-      padding-left: 20px; /* Extended left padding for bio */
-      padding-right: 20px;
+      width: 100vw;
+      padding: 15px; /* REDUCED from 20px */
+      margin-left: 0 !important;
+      position: relative;
+      left: 0 !important;
+      border: 1px solid #e0e0e0;
+      background: #fafafa;
+      min-height: 100vh;
     }
 
     .portfolio-links {
       display: flex;
-      flex-wrap: nowrap; /* Keep Profile and Spaces in single line */
+      flex-wrap: nowrap;
       width: 100%;
-      justify-content: center;
+      justify-content: flex-start !important;
       align-items: center;
       gap: 5px;
-      margin-top: 10px;
-      max-width: 100%;
-    }
-
-    .portfolio-links a,
-    .portfolio-links span {
-      flex-shrink: 1; /* Allow shrinking to fit */
+      margin-top: 5px; /* REDUCED from 10px */
+      margin-left: 0 !important;
     }
 
     .portfolio-link {
@@ -34,85 +56,60 @@ description: |
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s ease;
-      font-size: 11px; /* Slightly smaller font */
+      font-size: 11px;
       white-space: nowrap;
       flex: 0 1 auto;
-      min-width: 70px; /* Reduced min-width */
+      min-width: 70px;
       max-width: 130px;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
     }
 
-    .portfolio-link.github {
-      background-color: #333;
-    }
+    .portfolio-link.github { background-color: #333; }
+    .portfolio-link.resume { background-color: #0073b1; }
+    .portfolio-link.huggingface { background-color: #ff7f00; }
 
-    .portfolio-link.resume {
-      background-color: #0073b1;
-    }
-
-    .portfolio-link.huggingface {
-      background-color: #ff7f00;
-    }
-
-    .portfolio-link:hover {
-      background-color: #005582;
-    }
-
-    .portfolio-link.github:hover {
-      background-color: #555;
-    }
-
-    .portfolio-link.resume:hover {
-      background-color: #005582;
-    }
-
-    .portfolio-link.huggingface:hover {
-      background-color: #e06600;
-    }
+    .portfolio-link:hover { background-color: #005582; }
+    .portfolio-link.github:hover { background-color: #555; }
+    .portfolio-link.resume:hover { background-color: #005582; }
+    .portfolio-link.huggingface:hover { background-color: #e06600; }
 
     .button-group {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; /* Left align for bio */
-      gap: 15px;
-      margin-top: 10px;
-      max-width: 100%;
+      display: block;
+      width: 100%;
+      margin-left: 0 !important;
     }
 
+    /* REDUCED SPACING BETWEEN SECTIONS */
     .profile-section {
       width: 100%;
+      margin-bottom: 10px; /* REDUCED from 20px */
+      margin-left: 0 !important;
     }
 
-    .separator {
-      color: #555;
-      margin: 0 3px;
-      flex-shrink: 0;
+    .separator { color: #555; margin: 0 3px; }
+    .section-heading { 
+      margin-bottom: 2px; /* REDUCED from 5px */
+      font-size: 14px; 
+      margin-left: 0 !important; 
     }
 
-    .section-heading {
-      margin-bottom: 5px;
-      font-size: 14px;
-    }
-
-    /* Responsive: Stack on very small screens */
     @media (max-width: 768px) {
-      .portfolio-links {
-        flex-wrap: wrap;
-      }
-      
-      .portfolio-link {
-        font-size: 10px;
-        min-width: 60px;
-        max-width: 110px;
+      .portfolio-container { padding: 10px; } /* FURTHER REDUCED */
+      .portfolio-links { 
+        flex-wrap: wrap; 
+        justify-content: flex-start !important; 
+        margin-top: 3px;
       }
     }
   </style>
 
+  <!-- SINGLE CONTAINER FOR ALL YOUR INFO -->
   <div class="portfolio-container">
     <div class="button-group">
-
+      
+      <!-- INTRO SECTION -->
       <div>
         <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 10px;">
           Hello there!, I'm Srivathsa 👋 
@@ -126,7 +123,10 @@ description: |
           <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
           Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
         </p>
+      </div>
 
+      <!-- PROFILE SECTION -->
+      <div>
         <p class="section-heading"><strong>Profile</strong></p>
         <div class="portfolio-links profile-section">
           <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
@@ -137,6 +137,7 @@ description: |
         </div>
       </div>
 
+      <!-- SPACES SECTION -->
       <div>
         <p class="section-heading"><strong>Spaces</strong></p>
         <div class="portfolio-links profile-section">
@@ -147,7 +148,6 @@ description: |
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
         </div>
       </div>
-
     </div>
   </div>
 
