@@ -18,13 +18,13 @@ description: |
       text-align: left !important;
     }
     
-    /* Portfolio specific styles - FIXED ALIGNMENT */
+    /* Portfolio specific styles - already left-aligned */
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
       max-width: 100%;
       width: 100%;
-      padding-left: 20px;
+      padding-left: 20px; /* Keep some left padding for readability */
       padding-right: 20px;
       margin-left: 0 !important;
     }
@@ -33,10 +33,11 @@ description: |
       display: flex;
       flex-wrap: nowrap;
       width: 100%;
-      justify-content: flex-start; /* Left align buttons */
+      justify-content: flex-start; /* Changed from center to flex-start */
       align-items: center;
       gap: 5px;
       margin-top: 10px;
+      max-width: 100%;
     }
 
     .portfolio-links a,
@@ -89,16 +90,18 @@ description: |
       background-color: #e06600;
     }
 
-    /* FIXED: Force left alignment for all sections */
     .button-group {
-      display: block; /* Changed from flex to block */
-      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
       margin-top: 10px;
+      max-width: 100%;
+      width: 100%;
     }
 
     .profile-section {
       width: 100%;
-      margin-bottom: 20px; /* Add space between sections */
     }
 
     .separator {
@@ -112,11 +115,11 @@ description: |
       font-size: 14px;
     }
 
-    /* Responsive */
+    /* Responsive: Stack on very small screens */
     @media (max-width: 768px) {
       .portfolio-links {
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: flex-start; /* Keep left alignment on mobile */
       }
       
       .portfolio-link {
