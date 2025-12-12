@@ -269,7 +269,7 @@ async function autoLoadResume() {
         autoLoadStatus.textContent = '🔄 Auto-loading resume...';
         
         // Upload to API
-        const apiResponse = await fetch(`${API_BASE}upload-resume`, {
+        const apiResponse = await fetch('/upload-resume', {
             method: 'POST',
             body: formData
         });
@@ -306,7 +306,7 @@ resumeUpload.addEventListener('change', async function(e) {
     formData.append('file', file);
     
     try {
-        const response = await fetch(`${API_BASE}/upload-resume`, {
+        const response = await fetch('/upload-resume', { 
             method: 'POST',
             body: formData
         });
