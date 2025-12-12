@@ -3,15 +3,14 @@ logo: /assets/img/my_pi.jpeg
 
 description: |
   <style>
-    /* CENTERED PORTFOLIO - Perfect center alignment */
-    * {
-      box-sizing: border-box;
-    }
+    /* CENTERED - NO FULL-PAGE CONTAINER OVERRIDES */
+    * { box-sizing: border-box; }
     
-    .portfolio-container {
-      max-width: 800px; /* Fixed width for perfect centering */
-      margin: 40px auto; /* Perfect center + top spacing */
-      padding: 30px 25px;
+    /* ONLY target the portfolio content - leave theme intact */
+    .portfolio-wrapper {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
       text-align: left;
       background: linear-gradient(145deg, #ffffff, #f8f9fa);
       border-radius: 20px;
@@ -29,19 +28,14 @@ description: |
       margin-top: 12px;
     }
 
-    .portfolio-links a,
-    .portfolio-links span {
-      flex-shrink: 1;
-    }
-
     .portfolio-link {
       background-color: #0073b1;
       color: white;
-      padding: 8px 16px; /* Bigger buttons */
+      padding: 8px 16px;
       border-radius: 8px;
       text-decoration: none;
       transition: all 0.3s ease;
-      font-size: 13px; /* Slightly bigger text */
+      font-size: 13px;
       font-weight: 500;
       white-space: nowrap;
       flex: 0 1 auto;
@@ -65,64 +59,50 @@ description: |
     .portfolio-link.resume:hover { background-color: #005582; }
     .portfolio-link.huggingface:hover { background-color: #e06600; }
 
-    .button-group {
-      display: block;
-      width: 100%;
+    .button-group { display: block; width: 100%; }
+    .profile-section { width: 100%; margin-bottom: 25px; }
+    .separator { color: #666; margin: 0 5px; font-weight: 300; }
+    .section-heading { 
+      margin-bottom: 8px; 
+      font-size: 16px; 
+      font-weight: 600; 
+      color: #333; 
     }
 
-    .profile-section {
-      width: 100%;
-      margin-bottom: 25px;
+    /* Ensure downloads stay within container */
+    .download-section {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
     }
 
-    .separator {
-      color: #666;
-      margin: 0 5px;
-      font-weight: 300;
-    }
-
-    .section-heading {
-      margin-bottom: 8px;
-      font-size: 16px;
-      font-weight: 600;
-      color: #333;
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
-      .portfolio-container { 
-        margin: 20px 15px; 
-        padding: 25px 20px; 
-        border-radius: 15px;
-      }
-      .portfolio-links { 
-        flex-wrap: wrap; 
-        gap: 6px;
-      }
-      .portfolio-link { 
-        font-size: 12px; 
-        padding: 6px 12px; 
-        min-width: 80px;
-      }
+      .portfolio-wrapper { margin: 20px 15px; padding: 25px 20px; border-radius: 15px; }
+      .portfolio-links { flex-wrap: wrap; gap: 6px; }
+      .portfolio-link { font-size: 12px; padding: 6px 12px; min-width: 80px; }
     }
   </style>
 
-  <div class="portfolio-container">
+  <!-- SINGLE CONTAINER HOLDS EVERYTHING: Profile, Spaces, Downloads -->
+  <div class="portfolio-wrapper">
     <div class="button-group">
+      
+      <!-- INTRO -->
       <div>
         <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 15px;">
           Hello there!, I'm Srivathsa 👋 
         </h2>
-
         <p style="font-family: 'Georgia', serif; font-style: italic; font-size: 18px; margin-bottom: 12px; color: #555;">
           🎓 Master of Science (Artificial Intelligence and Machine Learning) – Liverpool John Moores University (LJMU)
         </p>
-
         <p style="font-family: Palatino, 'Palatino Linotype', serif; font-weight: bold; font-size: 15px; color: #041828ff; margin-bottom: 25px; line-height: 1.4;">
           <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="22" style="vertical-align:middle" />
           Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
         </p>
+      </div>
 
+      <!-- PROFILE -->
+      <div>
         <p class="section-heading"><strong>Profile</strong></p>
         <div class="portfolio-links profile-section">
           <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
@@ -133,6 +113,7 @@ description: |
         </div>
       </div>
 
+      <!-- SPACES -->
       <div>
         <p class="section-heading"><strong>Spaces</strong></p>
         <div class="portfolio-links profile-section">
@@ -142,6 +123,11 @@ description: |
           <span class="separator">|</span>
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
         </div>
+      </div>
+
+      <!-- DOWNLOADS (show_downloads: true will appear here automatically) -->
+      <div class="download-section">
+        <p class="section-heading"><strong>Downloads</strong></p>
       </div>
     </div>
   </div>
