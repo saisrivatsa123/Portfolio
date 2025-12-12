@@ -7,24 +7,27 @@ description: |
       text-align: left;
       margin-top: 20px;
       max-width: 100%;
-      padding-left: 20px; /* Extended left padding for bio */
-      padding-right: 20px;
+      padding-left: 5px;
+    }
+
+    .bio-content {
+      padding-left: 20px; /* Only bio info moves left */
+      max-width: 100%;
     }
 
     .portfolio-links {
       display: flex;
-      flex-wrap: nowrap; /* Keep Profile and Spaces in single line */
+      flex-wrap: nowrap;
       width: 100%;
       justify-content: center;
       align-items: center;
       gap: 5px;
       margin-top: 10px;
-      max-width: 100%;
     }
 
     .portfolio-links a,
     .portfolio-links span {
-      flex-shrink: 1; /* Allow shrinking to fit */
+      flex-shrink: 1;
     }
 
     .portfolio-link {
@@ -34,10 +37,10 @@ description: |
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s ease;
-      font-size: 11px; /* Slightly smaller font */
+      font-size: 11px;
       white-space: nowrap;
       flex: 0 1 auto;
-      min-width: 70px; /* Reduced min-width */
+      min-width: 70px;
       max-width: 130px;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -75,14 +78,9 @@ description: |
     .button-group {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Left align for bio */
+      align-items: center;
       gap: 15px;
       margin-top: 10px;
-      max-width: 100%;
-    }
-
-    .profile-section {
-      width: 100%;
     }
 
     .separator {
@@ -96,7 +94,6 @@ description: |
       font-size: 14px;
     }
 
-    /* Responsive: Stack on very small screens */
     @media (max-width: 768px) {
       .portfolio-links {
         flex-wrap: wrap;
@@ -107,13 +104,18 @@ description: |
         min-width: 60px;
         max-width: 110px;
       }
+      
+      .bio-content {
+        padding-left: 10px;
+      }
     }
   </style>
 
   <div class="portfolio-container">
     <div class="button-group">
-
-      <div>
+      
+      <!-- Bio section with left offset only -->
+      <div class="bio-content">
         <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 10px;">
           Hello there!, I'm Srivathsa 👋 
         </h2>
@@ -126,9 +128,12 @@ description: |
           <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
           Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
         </p>
+      </div>
 
+      <!-- Profile links - centered -->
+      <div>
         <p class="section-heading"><strong>Profile</strong></p>
-        <div class="portfolio-links profile-section">
+        <div class="portfolio-links">
           <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
           <span class="separator">|</span>
           <a class="portfolio-link" href="https://www.linkedin.com/in/sai-s-28288a165">LinkedIn</a>
@@ -137,9 +142,10 @@ description: |
         </div>
       </div>
 
+      <!-- Spaces links - centered -->
       <div>
         <p class="section-heading"><strong>Spaces</strong></p>
-        <div class="portfolio-links profile-section">
+        <div class="portfolio-links">
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Gemini_chatbot">Gemini Chatbot</a>
           <span class="separator">|</span>
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Ollama_operations">Ollama Operations</a>
