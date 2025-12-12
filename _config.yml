@@ -140,10 +140,10 @@ description: |
       <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
     </div>
 
-    <!-- DOWNLOADS FORCED INSIDE -->
-    <div class="download-section">
-      <p class="section-heading" style="text-align: center;"><strong>Downloads</strong></p>
-    </div>
+#    <!-- DOWNLOADS FORCED INSIDE -->
+#    <div class="download-section">
+#      <p class="section-heading" style="text-align: center;"><strong>Downloads</strong></p>
+#    </div>
 
   </div>
 
