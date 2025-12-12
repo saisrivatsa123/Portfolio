@@ -7,11 +7,12 @@ description: |
       text-align: left;
       margin-top: 20px;
       max-width: 100%;
-      padding-left: 5px;
+      padding: 0;
     }
 
-    .bio-content {
-      padding-left: 20px; /* Only bio info moves left */
+    .bio-container {
+      padding-left: 20px; /* Uniform left indent for entire bio + pic */
+      margin-bottom: 20px;
       max-width: 100%;
     }
 
@@ -105,8 +106,8 @@ description: |
         max-width: 110px;
       }
       
-      .bio-content {
-        padding-left: 10px;
+      .bio-container {
+        padding-left: 15px;
       }
     }
   </style>
@@ -114,8 +115,8 @@ description: |
   <div class="portfolio-container">
     <div class="button-group">
       
-      <!-- Bio section with left offset only -->
-      <div class="bio-content">
+      <!-- Complete bio + pic container - uniform indent -->
+      <div class="bio-container">
         <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 10px;">
           Hello there!, I'm Srivathsa 👋 
         </h2>
