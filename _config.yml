@@ -23,19 +23,19 @@ description: |
       text-align: left !important;
     }
     
-    /* MAIN CONTAINER FOR ALL INFO */
+    /* MAIN CONTAINER - REDUCED PADDING */
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
       max-width: 100%;
       width: 100vw;
-      padding: 20px;
+      padding: 15px; /* REDUCED from 20px */
       margin-left: 0 !important;
       position: relative;
       left: 0 !important;
-      border: 1px solid #e0e0e0; /* Optional: Visual container border */
-      background: #fafafa; /* Optional: Light background */
-      min-height: 100vh; /* Full height container */
+      border: 1px solid #e0e0e0;
+      background: #fafafa;
+      min-height: 100vh;
     }
 
     .portfolio-links {
@@ -45,7 +45,7 @@ description: |
       justify-content: flex-start !important;
       align-items: center;
       gap: 5px;
-      margin-top: 10px;
+      margin-top: 5px; /* REDUCED from 10px */
       margin-left: 0 !important;
     }
 
@@ -81,18 +81,27 @@ description: |
       margin-left: 0 !important;
     }
 
+    /* REDUCED SPACING BETWEEN SECTIONS */
     .profile-section {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 10px; /* REDUCED from 20px */
       margin-left: 0 !important;
     }
 
     .separator { color: #555; margin: 0 3px; }
-    .section-heading { margin-bottom: 5px; font-size: 14px; margin-left: 0 !important; }
+    .section-heading { 
+      margin-bottom: 2px; /* REDUCED from 5px */
+      font-size: 14px; 
+      margin-left: 0 !important; 
+    }
 
     @media (max-width: 768px) {
-      .portfolio-container { padding: 15px; }
-      .portfolio-links { flex-wrap: wrap; justify-content: flex-start !important; }
+      .portfolio-container { padding: 10px; } /* FURTHER REDUCED */
+      .portfolio-links { 
+        flex-wrap: wrap; 
+        justify-content: flex-start !important; 
+        margin-top: 3px;
+      }
     }
   </style>
 
@@ -139,7 +148,6 @@ description: |
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
         </div>
       </div>
-
     </div>
   </div>
 
