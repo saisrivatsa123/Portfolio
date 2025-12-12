@@ -4,78 +4,96 @@ title: Welcome
 ---
 
 <style>
-  /* CENTER ALL PROJECTS AND CONTENT */
+  /* CENTER ALL PROJECTS - BIGGER CARDS */
   * { box-sizing: border-box; }
   
   .projects-container {
-    max-width: 1000px; /* Reasonable max width */
+    max-width: 1200px; /* WIDER container */
     margin: 0 auto; /* Perfect center */
-    padding: 40px 20px;
+    padding: 60px 30px; /* MORE padding */
     text-align: center;
   }
   
   .project-card {
-    background: #f8f9fa;
-    border-radius: 12px;
-    padding: 30px 20px;
-    margin: 30px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 20px; /* BIGGER radius */
+    padding: 50px 30px; /* BIGGER padding */
+    margin: 50px 0; /* BIGGER spacing */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15); /* DEEPER shadow */
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.4s ease;
+    max-width: 800px; /* BIGGER card width */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
   
   .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    border-color: rgba(0,115,177,0.3);
   }
   
   .project-title {
-    font-size: 24px;
+    font-size: 32px; /* BIGGER title */
     font-weight: bold;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-    font-family: 'Arial Black', sans-serif;
+    color: #111121;
+    margin-bottom: 20px;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    line-height: 1.2;
   }
   
   .project-desc {
-    font-size: 16px;
+    font-size: 20px; /* BIGGER desc */
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-weight: 500;
+    line-height: 1.5;
+    padding: 0 20px;
   }
   
   .project-image {
-    max-width: 400px;
-    max-height: 250px;
-    width: 100%;
+    max-width: 500px; /* BIGGER images */
+    max-height: 320px;
+    width: 90%; /* Responsive */
     height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    margin-top: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    border: 3px solid #e9ecef;
   }
   
   .github-badge {
     background: linear-gradient(45deg, #24292e, #4078c0);
     color: white !important;
-    padding: 8px 16px;
-    border-radius: 25px;
+    padding: 12px 24px; /* BIGGER badge */
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px; /* BIGGER text */
     display: inline-block;
-    margin: 10px 0;
+    margin: 20px 0;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   }
   
   .github-badge:hover {
     background: linear-gradient(45deg, #4078c0, #24292e);
-    transform: scale(1.05);
+    transform: scale(1.08) translateY(-2px);
     color: white !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   }
   
   @media (max-width: 768px) {
-    .projects-container { padding: 20px 15px; }
-    .project-card { padding: 20px 15px; margin: 20px 0; }
-    .project-title { font-size: 20px; }
+    .projects-container { padding: 40px 20px; }
+    .project-card { 
+      padding: 40px 25px; 
+      margin: 40px 10px; 
+      border-radius: 15px;
+    }
+    .project-title { font-size: 26px; }
+    .project-desc { font-size: 18px; }
+    .project-image { max-width: 400px; max-height: 260px; }
   }
 </style>
 
@@ -84,7 +102,7 @@ title: Welcome
   <!-- Project 1 -->
   <div class="project-card">
     <div class="project-title">Fine-tuned Sentiment Analysis using Distilled BERT</div>
-    <div class="project-desc">**Advanced NLP model fine-tuning with Distilled BERT for sentiment classification**</div>
+    <div class="project-desc">Advanced NLP model fine-tuning with Distilled BERT for sentiment classification tasks</div>
     <a href="https://github.com/saisrivatsa123/BERT" class="github-badge">
       📂 View on GitHub
     </a>
@@ -94,7 +112,7 @@ title: Welcome
   <!-- Project 2 -->
   <div class="project-card">
     <div class="project-title">Denoising Autoencoders</div>
-    <div class="project-desc">**Deep learning model for image denoising and reconstruction**</div>
+    <div class="project-desc">Deep learning model for image denoising and reconstruction using autoencoder architecture</div>
     <a href="https://github.com/saisrivatsa123/Denoising-Auto_encoders" class="github-badge">
       📂 View on GitHub
     </a>
@@ -104,7 +122,7 @@ title: Welcome
   <!-- Project 3 -->
   <div class="project-card">
     <div class="project-title">LendingClub Case Study</div>
-    <div class="project-desc">**Financial risk analysis and loan default prediction**</div>
+    <div class="project-desc">Financial risk analysis and loan default prediction using machine learning techniques</div>
     <a href="https://github.com/saisrivatsa123/LendingClubCaseStudy" class="github-badge">
       📂 View on GitHub
     </a>
@@ -114,7 +132,7 @@ title: Welcome
   <!-- Project 4 -->
   <div class="project-card">
     <div class="project-title">Long Short-Term Memory (LSTM)</div>
-    <div class="project-desc">**Recurrent neural network for time series forecasting**</div>
+    <div class="project-desc">Recurrent neural network implementation for time series forecasting and sequence modeling</div>
     <a href="https://github.com/saisrivatsa123/LSTM" class="github-badge">
       📂 View on GitHub
     </a>
