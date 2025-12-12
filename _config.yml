@@ -7,12 +7,21 @@ description: |
       text-align: left;
       margin-top: 20px;
       max-width: 100%;
-      padding-left: 5px;
+      padding: 0 20px; /* Adds uniform left/right indentation */
     }
 
     .bio-content {
-      padding-left: 20px; /* Only bio info moves left */
+      padding-left: 15px; /* Additional bio indent within container */
       max-width: 100%;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+      padding: 0 10px; /* Consistent indentation for all sections */
     }
 
     .portfolio-links {
@@ -23,6 +32,7 @@ description: |
       align-items: center;
       gap: 5px;
       margin-top: 10px;
+      padding: 0 5px; /* Slight indent for links */
     }
 
     .portfolio-links a,
@@ -75,14 +85,6 @@ description: |
       background-color: #e06600;
     }
 
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
     .separator {
       color: #555;
       margin: 0 3px;
@@ -95,8 +97,21 @@ description: |
     }
 
     @media (max-width: 768px) {
+      .portfolio-container {
+        padding: 0 10px;
+      }
+      
+      .bio-content {
+        padding-left: 10px;
+      }
+      
+      .button-group {
+        padding: 0 5px;
+      }
+      
       .portfolio-links {
         flex-wrap: wrap;
+        padding: 0 2px;
       }
       
       .portfolio-link {
@@ -104,17 +119,13 @@ description: |
         min-width: 60px;
         max-width: 110px;
       }
-      
-      .bio-content {
-        padding-left: 10px;
-      }
     }
   </style>
 
   <div class="portfolio-container">
     <div class="button-group">
       
-      <!-- Bio section with left offset only -->
+      <!-- Bio section with proper indentation -->
       <div class="bio-content">
         <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 10px;">
           Hello there!, I'm Srivathsa 👋 
@@ -130,7 +141,7 @@ description: |
         </p>
       </div>
 
-      <!-- Profile links - centered -->
+      <!-- Profile links - properly indented -->
       <div>
         <p class="section-heading"><strong>Profile</strong></p>
         <div class="portfolio-links">
@@ -142,7 +153,7 @@ description: |
         </div>
       </div>
 
-      <!-- Spaces links - centered -->
+      <!-- Spaces links - properly indented -->
       <div>
         <p class="section-heading"><strong>Spaces</strong></p>
         <div class="portfolio-links">
