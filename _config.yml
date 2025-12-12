@@ -4,9 +4,7 @@ logo: /assets/img/my_pi.jpeg
 description: |
   <style>
     /* BULLETPROOF LEFT ALIGN - Targets ALL possible theme containers */
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     
     html, body {
       margin: 0 !important;
@@ -14,20 +12,9 @@ description: |
       width: 100% !important;
     }
     
-    /* Target Jekyll Minimal theme's exact classes */
-    .site,
-    .site-header,
-    .site-footer,
-    .site-main,
-    .site-content,
-    .wrapper,
-    .page,
-    .page-content,
-    .post,
-    .post-content,
-    .main-content,
-    main,
-    article {
+    .site, .site-header, .site-footer, .site-main, .site-content,
+    .wrapper, .page, .page-content, .post, .post-content,
+    .main-content, main, article {
       max-width: none !important;
       width: 100% !important;
       margin: 0 !important;
@@ -36,17 +23,19 @@ description: |
       text-align: left !important;
     }
     
-    /* Portfolio styles */
+    /* MAIN CONTAINER FOR ALL INFO */
     .portfolio-container {
       text-align: left;
       margin-top: 20px;
       max-width: 100%;
       width: 100vw;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 20px;
       margin-left: 0 !important;
       position: relative;
       left: 0 !important;
+      border: 1px solid #e0e0e0; /* Optional: Visual container border */
+      background: #fafafa; /* Optional: Light background */
+      min-height: 100vh; /* Full height container */
     }
 
     .portfolio-links {
@@ -57,11 +46,7 @@ description: |
       align-items: center;
       gap: 5px;
       margin-top: 10px;
-    }
-
-    .portfolio-links a,
-    .portfolio-links span {
-      flex-shrink: 1;
+      margin-left: 0 !important;
     }
 
     .portfolio-link {
@@ -93,31 +78,29 @@ description: |
     .button-group {
       display: block;
       width: 100%;
+      margin-left: 0 !important;
     }
 
     .profile-section {
       width: 100%;
       margin-bottom: 20px;
+      margin-left: 0 !important;
     }
 
-    .separator {
-      color: #555;
-      margin: 0 3px;
-    }
-
-    .section-heading {
-      margin-bottom: 5px;
-      font-size: 14px;
-    }
+    .separator { color: #555; margin: 0 3px; }
+    .section-heading { margin-bottom: 5px; font-size: 14px; margin-left: 0 !important; }
 
     @media (max-width: 768px) {
-      .portfolio-container { padding-left: 15px; padding-right: 15px; }
+      .portfolio-container { padding: 15px; }
       .portfolio-links { flex-wrap: wrap; justify-content: flex-start !important; }
     }
   </style>
 
+  <!-- SINGLE CONTAINER FOR ALL YOUR INFO -->
   <div class="portfolio-container">
     <div class="button-group">
+      
+      <!-- INTRO SECTION -->
       <div>
         <h2 style="font-family: 'Arial Black', Gadget, sans-serif; color: #111121ff; margin-bottom: 10px;">
           Hello there!, I'm Srivathsa 👋 
@@ -131,7 +114,10 @@ description: |
           <img src="assets/img/databricks%20image.jpg" alt="Databricks Logo" width="20" style="vertical-align:middle" />
           Databricks Certified Data Engineer Associate | Microsoft Fabric | AI & ML | LLMs | LangChain | Deep Learning | Computer Vision | MLOps | PySpark | SQL | Python | Azure | HL7 | FHIR |
         </p>
+      </div>
 
+      <!-- PROFILE SECTION -->
+      <div>
         <p class="section-heading"><strong>Profile</strong></p>
         <div class="portfolio-links profile-section">
           <a class="portfolio-link resume" href="blob/My_resume.pdf">Resume</a>
@@ -142,6 +128,7 @@ description: |
         </div>
       </div>
 
+      <!-- SPACES SECTION -->
       <div>
         <p class="section-heading"><strong>Spaces</strong></p>
         <div class="portfolio-links profile-section">
@@ -152,6 +139,7 @@ description: |
           <a class="portfolio-link huggingface" href="https://huggingface.co/spaces/srivathsa96/Langchain-QA-Chatbot-OpenAI">Langchain QA Chatbot</a>
         </div>
       </div>
+
     </div>
   </div>
 
