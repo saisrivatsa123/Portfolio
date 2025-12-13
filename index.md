@@ -6,14 +6,14 @@ title: Welcome
 <style>
   /* [ALL YOUR ORIGINAL STYLES + ENHANCED AI PANEL] */
   * { box-sizing: border-box; }
-  
+
   .projects-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 30px;
     text-align: center;
   }
-  
+
   .project-card {
     background: linear-gradient(145deg, #ffffff, #f8f9fa);
     border-radius: 20px;
@@ -27,13 +27,13 @@ title: Welcome
     margin-right: auto;
     display: block;
   }
-  
+
   .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 60px rgba(0,0,0,0.25);
     border-color: rgba(0,115,177,0.3);
   }
-  
+
   .project-title {
     font-size: 32px;
     font-weight: bold;
@@ -42,7 +42,7 @@ title: Welcome
     font-family: 'Arial Black', Gadget, sans-serif;
     line-height: 1.2;
   }
-  
+
   .project-desc {
     font-size: 20px;
     color: #333;
@@ -51,7 +51,7 @@ title: Welcome
     line-height: 1.5;
     padding: 0 20px;
   }
-  
+
   .project-image {
     max-width: 500px;
     max-height: 320px;
@@ -62,7 +62,7 @@ title: Welcome
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     border: 3px solid #e9ecef;
   }
-  
+
   .github-badge {
     background: linear-gradient(45deg, #24292e, #4078c0);
     color: white !important;
@@ -76,14 +76,14 @@ title: Welcome
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   }
-  
+
   .github-badge:hover {
     background: linear-gradient(45deg, #4078c0, #24292e);
     transform: scale(1.08) translateY(-2px);
     color: white !important;
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   }
-  
+
   /* ENHANCED AI PANEL WITH UPLOAD */
   .ai-search-fixed {
     position: fixed;
@@ -99,12 +99,12 @@ title: Welcome
     backdrop-filter: blur(15px);
     transition: all 0.3s ease;
   }
-  
+
   .ai-search-fixed:hover {
     box-shadow: 0 30px 80px rgba(0,0,0,0.35);
     border-color: #005a8b;
   }
-  
+
   .ai-upload-btn {
     width: 100%;
     padding: 10px;
@@ -118,13 +118,13 @@ title: Welcome
     transition: all 0.3s ease;
     margin-bottom: 12px;
   }
-  
+
   .ai-upload-btn:hover {
     background: linear-gradient(45deg, #20c997, #28a745);
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(40,167,69,0.4);
   }
-  
+
   .ai-search-label {
     font-size: 15px;
     color: #333;
@@ -132,7 +132,7 @@ title: Welcome
     font-weight: 600;
     display: block;
   }
-  
+
   .ai-search-input {
     width: 100%;
     padding: 14px 18px;
@@ -144,17 +144,17 @@ title: Welcome
     transition: all 0.3s ease;
     box-sizing: border-box;
   }
-  
+
   .ai-search-input:focus {
     border-color: #0073b1;
     box-shadow: 0 0 20px rgba(0,115,177,0.3);
   }
-  
+
   .ai-search-input::placeholder {
     color: #888;
     font-weight: 400;
   }
-  
+
   .ai-answer {
     margin-top: 12px;
     padding: 15px;
@@ -168,11 +168,11 @@ title: Welcome
     display: none;
     box-shadow: inset 0 2px 10px rgba(0,115,177,0.1);
   }
-  
+
   .ai-loading { color: #0073b1; font-style: italic; }
   .ai-error { color: #dc3545; background: #fff5f5 !important; border-left-color: #dc3545 !important; }
   .ai-success { color: #28a745; }
-  
+
   .upload-status {
     font-size: 12px;
     margin-top: 8px;
@@ -181,7 +181,7 @@ title: Welcome
     text-align: center;
     font-weight: 500;
   }
-  
+
   @media (max-width: 768px) {
     .ai-search-fixed { display: none; }
     .projects-container { padding: 40px 20px; }
@@ -201,10 +201,10 @@ title: Welcome
   </button>
   <div id="auto-load-status" class="upload-status" style="display: none;"></div>
   <div id="upload-status" class="upload-status" style="display: none;"></div>
-  
+
   <!-- Q&A -->
   <div class="ai-search-label">🤖 Ask about my profile:</div>
-  <input type="text" class="ai-search-input" id="profile-search" 
+  <input type="text" class="ai-search-input" id="profile-search"
          placeholder="Skills? Fabric experience? Certifications?" />
   <div id="ai-answer" class="ai-answer"></div>
 </div>
@@ -259,23 +259,23 @@ async function autoLoadResume() {
             console.log('Resume file not found, manual upload available');
             return;
         }
-        
+
         const blob = await response.blob();
         const formData = new FormData();
         formData.append('file', blob, 'resume.pdf');
-        
+
         // Show loading
         autoLoadStatus.style.display = 'block';
         autoLoadStatus.textContent = '🔄 Auto-loading resume...';
-        
+
         // Upload to API
         const apiResponse = await fetch(`${API_BASE}/upload-resume`, {
             method: 'POST',
             body: formData
         });
-        
+
         const data = await apiResponse.json();
-        
+
         if (data.status === 'success') {
             autoLoadStatus.innerHTML = `✅ <strong>${data.filename}</strong> auto-loaded!`;
             autoLoadStatus.style.color = '#28a745';
@@ -297,21 +297,21 @@ window.addEventListener('load', autoLoadResume);
 resumeUpload.addEventListener('change', async function(e) {
     const file = e.target.files[0];
     if (!file) return;
-    
+
     uploadStatus.style.display = 'block';
     uploadStatus.textContent = '📤 Uploading...';
     uploadStatus.className = 'upload-status';
-    
+
     const formData = new FormData();
     formData.append('file', file);
-    
+
     try {
         const response = await fetch(`${API_BASE}/upload-resume`, {
             method: 'POST',
             body: formData
         });
         const data = await response.json();
-        
+
         if (data.error) {
             uploadStatus.textContent = `❌ ${data.error}`;
             uploadStatus.style.color = '#dc3545';
@@ -349,20 +349,20 @@ searchInput.addEventListener('keypress', function(e) {
 
 async function askProfile(question) {
     if (!question || question.trim().length < 3) return;
-    
+
     answerDiv.innerHTML = '<div class="ai-loading">🔍 Searching resume...</div>';
     answerDiv.style.display = 'block';
     answerDiv.className = 'ai-answer';
-    
+
     try {
         const response = await fetch(`${API_BASE}/ask`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ question: question.trim() })
         });
-        
+
         const data = await response.json();
-        
+
         if (data.error) {
             answerDiv.innerHTML = `<div class="ai-error">❌ ${data.error}</div>`;
         } else {
